@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../static/img/logo.jpg">
+        <title>Check List Manage | ECG Cloud</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/flatly/bootstrap.min.css">
+        <!-- jQuery UI -->
+        <link rel="stylesheet" href="../lib/jquery-ui-1.11.4/jquery-ui.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../lib/DataTables-1.10.8/css/dataTables.bootstrap.min.css">
+        <!-- Normalize.css -->
+        <link rel="stylesheet" href="../lib/normalize.css">
+        <!-- zTree_v3 -->
+        <link rel="stylesheet" href="../lib/zTree_v3/zTreeStyle.css">
+
+        <link rel="stylesheet" href="../static/css/frame.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- Warning: Respond.js doesn't work if you view the page via file:// -->
+        <!-- [if lt IE 9]>
+            <script src="../lib/html5shiv.min.js"></script>
+            <script src="../lib/respond.min.js"></script>
+        <![endif] -->
+    </head>
+    <body>
+        <!-- Navigation -->
+        <div class="navbar navbar-default navbar-fixed-top header" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand navbar-logo">
+                        <span class="navbar-logo-txt">ECG Cloud Platform</span>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown" role="presentation">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <span id="userName">Dick</span>
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="menu-link">个人信息</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a href="#" class="menu-link"><span class="glyphicon glyphicon-off"></span>&nbsp;退出登录</a>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right top-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-envelope"></span>
+                                <span>Message</span>
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li class="message-preview">
+                                        <a href="#" class="menu-link">
+                                            <div class="media">
+                                                <span class="pull-left">
+                                                    <img src="../static/img/placeholder_50.png" alt="" class="media-oject">
+                                                </span>
+                                                <div class="media-body">
+                                                    <h5 class="media-heading"><strong>John Smith</strong></h5>
+                                                    <p class="small text-muted"><i class="glyphicon glyphicon-time"></i> Yesterday at 4:32 PM</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="message-preview">
+                                        <a href="#" class="menu-link">
+                                            <div class="media">
+                                                <span class="pull-left">
+                                                    <img src="../static/img/placeholder_50.png" alt="" class="media-oject">
+                                                </span>
+                                                <div class="media-body">
+                                                    <h5 class="media-heading"><strong>John Smith</strong></h5>
+                                                    <p class="small text-muted"><i class="glyphicon glyphicon-time"></i> Yesterday at 4:32 PM</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar Menu Items -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav side-nav">
+                        <li>
+                            <a href="#">首页</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">检查单管理</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#team-drop">
+                                <span>团队管理</span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul id="team-drop" class="collapse">
+                                <li><a href="teamManage.html">成员管理</a></li>
+                                <li><a href="taskManage.html">任务管理</a></li>
+                                <li><a href="#">基层医院管理</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="userManage.html">用户管理</a>
+                        </li>
+                        <li>
+                            <a href="#">消息管理</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row main-page">
+            <div class="path-navigation">
+                <ol class="breadcrumb">
+                    <li><a href="#">首页</a></li>
+                    <li class="active">检查单管理</li>
+                </ol>
+            </div>
+            <div class="search-container">
+                <div class="col-md-6 col-md-offset-3 input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="检查单号/分析技师名字/审核医生名字/基层医院名称">
+                    <span class="input-group-btn">
+                        <a href="javascript:void(0);" class="btn btn-default">Search...</a>
+                    </span>
+                </div>
+            </div>
+            <div class="container filter-container">
+                <form class="form-inline filter-date">
+                    <div class="form-group">
+                        <label class="control-label">起止时间 :</label>
+                        <input type="text" class="form-control input-sm " id="filterBeginDate" placeholder="开始日期">
+                        <span class="glyphicon glyphicon-minus"></span>
+                        <input type="text" class="form-control input-sm " id="filterEndDate" placeholder="结束日期">
+                        &nbsp;&nbsp;
+                        <label>
+                            <input type="checkbox" id=""> 不限时间
+                        </label>
+                    </div>
+                </form>
+                <form class="form-inline filter-status">
+                    <div class="form-group">
+                         <label class="control-label">检查单状态 :</label>
+                         <label class="checkbox-inline">
+                             <input type="checkbox" id="" value="status1"> 未分析
+                         </label>
+                         <label class="checkbox-inline">
+                             <input type="checkbox" id="" value="status2"> 分析中
+                         </label>
+                         <label class="checkbox-inline">
+                             <input type="checkbox" id="" value="status3"> 报告审核
+                         </label>
+                         <label class="checkbox-inline">
+                             <input type="checkbox" id="" value="status4"> 已审核
+                         </label>
+                    </div>
+                </form>
+                <form class="form-inline filter-addional">
+                    <div class="form-group">
+                        <label class="control-label">更多查询条件 :</label>
+                        <input type="text" class="form-control input-sm" id="filterUserName" placeholder="姓名">
+                        <input type="text" class="form-control input-sm" id="filterUserName" placeholder="病人号">
+                        <input type="text" class="form-control input-sm" id="filterUserName" placeholder="住院号/门诊号">
+                        <input type="text" class="form-control input-sm" id="filterUserName" placeholder="病区">
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label"></label>
+                        <input type="text" class="form-control input-sm" id="filterUserName" placeholder="申请医生">
+                        <input type="text" class="form-control input-sm" id="filterUserName" placeholder="审核医生">
+                        <input type="text" class="form-control input-sm" id="filterUserName" placeholder="申请医院">
+                        <input type="text" class="form-control input-sm" id="filterUserName" placeholder="结论">
+                    </div>
+                </form>
+                <form class="form-inline filter-btn-group">
+                    <div class="pull-right">
+                        <a href="#" class="btn btn-primary btn-sm">确定搜索</a>
+                        <a href="#" class="btn btn-default btn-sm">清除条件</a>
+                    </div>
+                </form>
+            </div>
+            <div class="container-fluid table-container">
+                <table class="table table-striped table-hover table-bordered" cellspacing="0" width="100%" id="checkListTable">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>检查单号</th>
+                            <th>病人号</th>
+                            <th>姓名</th>
+                            <th>申请医院</th>
+                            <th>检查单类型</th>
+                            <th>申请医生</th>
+                            <th>分析技师</th>
+                            <th>状态</th>
+                            <th>编辑状态</th>
+                            <th>时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- jQuery-2.0.3 -->
+        <script src="../lib/jquery-2.0.3.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+        <!-- jQuery UI -->
+        <script src="../lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+        <!-- DataTables -->
+        <script src="../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
+        <script src="../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
+        <!-- zTree_v3 -->
+        <script src="../lib/zTree_v3/jquery.ztree.core-3.5.min.js"></script>
+
+        <script src="../static/js/checkListManage.js"></script>
+    </body>
+</html>

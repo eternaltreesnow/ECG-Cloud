@@ -1,0 +1,8 @@
+.task-form {
+    max-width: 960px;
+}
+.hint {
+    color: #A94442;
+    height: 20px;
+    line-height: 20px;
+}

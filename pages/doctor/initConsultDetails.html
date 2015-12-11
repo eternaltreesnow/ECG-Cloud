@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../../static/img/logo.jpg">
+        <title>查看会诊 | 医生</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../../lib/bootstrap-3.3.5-dist/flatly/bootstrap.min.css">
+        <!-- jQuery UI -->
+        <link rel="stylesheet" href="../../lib/jquery-ui-1.11.4/jquery-ui.min.css">
+        <!-- Normalize.css -->
+        <link rel="stylesheet" href="../../lib/normalize.css">
+
+        <link rel="stylesheet" href="../../static/css/frame.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- Warning: Respond.js doesn't work if you view the page via file:// -->
+        <!-- [if lt IE 9]>
+            <script src="../../lib/html5shiv.min.js"></script>
+            <script src="../../lib/respond.min.js"></script>
+        <![endif] -->
+    </head>
+    <body>
+        <!-- Navigation -->
+        <div class="navbar navbar-default navbar-fixed-top header" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand navbar-logo">
+                        <span class="navbar-logo-txt">ECG Cloud Platform</span>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown" role="presentation">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <span id="userName">医生</span>
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="menu-link">个人信息</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a href="../index.html" class="menu-link"><span class="glyphicon glyphicon-off"></span>&nbsp;退出登录</a>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right top-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-envelope"></span>
+                                <span>Message</span>
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li class="message-preview">
+                                        <a href="#" class="menu-link">
+                                            <div class="media">
+                                                <span class="pull-left">
+                                                    <img src="../../static/img/placeholder_50.png" alt="" class="media-oject">
+                                                </span>
+                                                <div class="media-body">
+                                                    <h5 class="media-heading"><strong>John Smith</strong></h5>
+                                                    <p class="small text-muted"><i class="glyphicon glyphicon-time"></i> Yesterday at 4:32 PM</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar Menu Items -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav side-nav">
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#task-drop">
+                                <span>任务管理</span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul id="task-drop" class="collapse">
+                                <li><a href="uncheckTaskManage.html">待审核任务<span class="badge pull-right">5</span></a></li>
+                                <li><a href="">所有任务</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#consultation-drop">
+                                <span>会诊管理</span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul id="consultation-drop" class="">
+                                <li class="active"><a href="initConsultManage.html">发起的会诊</a></li>
+                                <li><a href="joinConsultManage.html">参加的会诊</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row main-page">
+            <div class="path-navigation">
+                <ol class="breadcrumb">
+                    <li><a href=""></a>会诊管理</li>
+                    <li><a href="initConsultManage.html">发起的会诊</a></li>
+                    <li class="active">会诊详情</li>
+                </ol>
+            </div>
+            <div class="container-fluid">
+                <div class="col-md-8 consult-container">
+                    <article class="post">
+                        <header class="post-head">
+                            <h1 class="post-title">会诊标题xxxx</h1>
+                            <section class="post-meta">
+                                发起者 :<span class="author">王教授</span>•
+                                <time class="post-date">2015年12月4日 14:25</time>
+                            </section>
+                        </header>
+                        <section class="post-content">
+                            <p>简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明</p>
+                        </section>
+                        <section class="post-file well well-sm">
+                            <div class="post-report">
+                                <div class="report-title">心电报告.xxxx</div>
+                                <a href="javascript:void(0);" class="btn btn-primary btn-sm pull-right">下载报告</a>
+                            </div>
+                            <div class="post-data">
+                                <div class="data-title">心电数据.xxx</div>
+                                <a href="javascript:void(0);" class="btn btn-primary btn-sm pull-right">下载心电数据</a>
+                            </div>
+                        </section>
+                    </article>
+                    <div class="comment-container">
+                        <div class="comment-list-header">
+                            <span id="commentNumber">3</span>个诊断意见
+                        </div>
+                        <div class="comment-list-body">
+                            <!-- Comment Item begin -->
+                            <div class="comment-item">
+                                <div class="comment-item-head">
+                                    <a href="javascript:void(0);" class="comment-user-img">
+                                        <img src="../../static/img/placeholder_50.png">
+                                    </a>
+                                    <div class="comment-item-title">
+                                        <div class="comment-user-name">王教授</div>
+                                        <div class="comment-date">2015年12月4日 15:35</div>
+                                    </div>
+                                </div>
+                                <div class="comment-item-content">
+                                    <p>1、频发多源室性早搏：提前出现宽大畸形QRS波群， QRS≥0.12秒， 伴继发性ST-T改 变，宽大畸形QRS波群之前没有相关的P波，≥6个分钟（或1份心电图≥6个），同一导联出现两种或两种以上形态，联律间期不一致。</p>
+                                    <p>2、窦性心律不齐：P波：窦性节律中出现较长的间歇，其间无P波，长间歇不是基本节律PP间期的整数倍，PP间期>2.5秒</p>
+                                </div>
+                            </div>
+                            <!-- Comment Item end -->
+                            <!-- Comment Item begin -->
+                            <div class="comment-item">
+                                <div class="comment-item-head">
+                                    <a href="javascript:void(0);" class="comment-user-img">
+                                        <img src="../../static/img/placeholder_50.png">
+                                    </a>
+                                    <div class="comment-item-title">
+                                        <div class="comment-user-name">王教授</div>
+                                        <div class="comment-date">2015年12月4日 15:35</div>
+                                    </div>
+                                </div>
+                                <div class="comment-item-content">
+                                    <p>1、频发多源室性早搏：提前出现宽大畸形QRS波群， QRS≥0.12秒， 伴继发性ST-T改 变，宽大畸形QRS波群之前没有相关的P波，≥6个分钟（或1份心电图≥6个），同一导联出现两种或两种以上形态，联律间期不一致。</p>
+                                    <p>2、窦性心律不齐：P波：窦性节律中出现较长的间歇，其间无P波，长间歇不是基本节律PP间期的整数倍，PP间期>2.5秒</p>
+                                </div>
+                            </div>
+                            <!-- Comment Item end -->
+                            <!-- Comment Item begin -->
+                            <div class="comment-item">
+                                <div class="comment-item-head">
+                                    <a href="javascript:void(0);" class="comment-user-img">
+                                        <img src="../../static/img/placeholder_50.png">
+                                    </a>
+                                    <div class="comment-item-title">
+                                        <div class="comment-user-name">王教授</div>
+                                        <div class="comment-date">2015年12月4日 15:35</div>
+                                    </div>
+                                </div>
+                                <div class="comment-item-content">
+                                    <p>1、频发多源室性早搏：提前出现宽大畸形QRS波群， QRS≥0.12秒， 伴继发性ST-T改 变，宽大畸形QRS波群之前没有相关的P波，≥6个分钟（或1份心电图≥6个），同一导联出现两种或两种以上形态，联律间期不一致。</p>
+                                    <p>2、窦性心律不齐：P波：窦性节律中出现较长的间歇，其间无P波，长间歇不是基本节律PP间期的整数倍，PP间期>2.5秒</p>
+                                </div>
+                            </div>
+                            <!-- Comment Item end -->
+                        </div>
+                        <div class="comment-list-footer">
+                            <div class="comment-load-more-content" id="loadContentDiv">
+                                <span id="hideNumber">0</span>个诊断结论被折叠
+                            </div>
+                        </div>
+                    </div>
+                    <div class="summary-container">
+                        <div class="summary-header">
+                            会诊总结
+                        </div>
+                        <div class="summary-content">
+                            <textarea class="form-control" name="inputSummary" id="inputSummary" rows="4"></textarea>
+                            <div class="summary-result" id="summaryResult" style="display: none;">
+                                <p>1、频发多源室性早搏：提前出现宽大畸形QRS波群， QRS≥0.12秒， 伴继发性ST-T改 变，宽大畸形QRS波群之前没有相关的P波，≥6个分钟（或1份心电图≥6个），同一导联出现两种或两种以上形态，联律间期不一致。</p>
+                                <p>2、窦性心律不齐：P波：窦性节律中出现较长的间歇，其间无P波，长间歇不是基本节律PP间期的整数倍，PP间期>2.5秒</p>
+                            </div>
+                        </div>
+                        <div class="summary-footer">
+                            <a href="javascript:void(0);" class="btn btn-primary pull-right" id="submitBtn">提交会诊总结</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 doc-container">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            受邀请医生
+                        </div>
+                        <div class="panel-body list-group">
+                            <li class="list-group-item">王医生</li>
+                            <li class="list-group-item">李医生</li>
+                            <li class="list-group-item">陈医生</li>
+                            <li class="list-group-item">郑医生</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery-2.0.3 -->
+        <script src="../../lib/jquery-2.0.3.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+        <!-- jQuery UI -->
+        <script src="../../lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+        <!-- DataTables -->
+        <script src="../../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
+        <script src="../../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
+
+        <script src="../../static/js/doctor/initConsultDetails.js"></script>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+.task-form {
+    max-width: 800px;
+}
+#typeContainer,
+#feedbackContainer {
+    display: none;
+}

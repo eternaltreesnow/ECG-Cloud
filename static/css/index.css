@@ -1,0 +1,49 @@
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+.hospital-link {
+    margin: 200px 20px;
+    padding: 0;
+    border-radius: 15px;
+    background-color: #FAFAFA;
+    border: 1px solid #E3E3E3;
+    text-decoration: none;
+}
+.hospital-link:hover,
+.hospital-link:active {
+    background-color: #EEEEEE;
+}
+.hospital-container {
+    cursor: pointer;
+    height: 100px;
+    line-height: 100px;
+    font-size: 24pt;
+    color: #555555;
+    padding-left: 120px;
+    background: url(../img/nation_64-64.png) no-repeat;
+    background-position: 8% 50%;
+}
+.doctor-container {
+    cursor: pointer;
+    height: 100px;
+    line-height: 100px;
+    font-size: 24pt;
+    color: #555555;
+    padding-left: 120px;
+    background: url(../img/doctor_58-64.png) no-repeat;
+    background-position: 8% 50%;
+}
+.technician-container {
+    cursor: pointer;
+    height: 100px;
+    line-height: 100px;
+    font-size: 24pt;
+    color: #555555;
+    padding-left: 120px;
+    background: url(../img/technician_57-64.png) no-repeat;
+    background-position: 8% 50%;
+}
+

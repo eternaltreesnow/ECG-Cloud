@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../../static/img/logo.jpg">
+        <title>重分析任务 | 技师</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../../lib/bootstrap-3.3.5-dist/flatly/bootstrap.min.css">
+        <!-- jQuery UI -->
+        <link rel="stylesheet" href="../../lib/jquery-ui-1.11.4/jquery-ui.min.css">
+        <!-- Normalize.css -->
+        <link rel="stylesheet" href="../../lib/normalize.css">
+
+        <link rel="stylesheet" href="../../static/css/frame.css">
+        <link rel="stylesheet" href="../../static/css/technician/reanalysisTaskManage.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- Warning: Respond.js doesn't work if you view the page via file:// -->
+        <!-- [if lt IE 9]>
+            <script src="../../lib/html5shiv.min.js"></script>
+            <script src="../../lib/respond.min.js"></script>
+        <![endif] -->
+    </head>
+    <body>
+        <!-- Navigation -->
+        <div class="navbar navbar-default navbar-fixed-top header" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand navbar-logo">
+                        <span class="navbar-logo-txt">ECG Cloud Platform</span>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown" role="presentation">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <span id="userName">技师1</span>
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="menu-link">个人信息</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a href="../index.html" class="menu-link"><span class="glyphicon glyphicon-off"></span>&nbsp;退出登录</a>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right top-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-envelope"></span>
+                                <span>Message</span>
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li class="message-preview">
+                                        <a href="#" class="menu-link">
+                                            <div class="media">
+                                                <span class="pull-left">
+                                                    <img src="../../static/img/placeholder_50.png" alt="" class="media-oject">
+                                                </span>
+                                                <div class="media-body">
+                                                    <h5 class="media-heading"><strong>John Smith</strong></h5>
+                                                    <p class="small text-muted"><i class="glyphicon glyphicon-time"></i> Yesterday at 4:32 PM</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar Menu Items -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav side-nav">
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#task-drop">
+                                <span>任务管理</span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul id="task-drop" class="">
+                                <li><a href="unoccupiedTaskManage.html">可接任务</a></li>
+                                <li><a href="occupiedTaskManage.html">已接任务</a></li>
+                                <li class="active"><a href="reanalysisTaskManage.html">重分析任务</a></li>
+                                <li><a href="finishedTaskManage.html">已完成任务</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row main-page">
+            <div class="path-navigation">
+                <ol class="breadcrumb">
+                    <li><a href="">任务管理</a></li>
+                    <li><a href="reanalysisTaskManage.html">重分析任务</a></li>
+                    <li class="active">任务详情</li>
+                </ol>
+            </div>
+            <div class="container task-form">
+                <form class="form-horizontal">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><b>基本信息</b></h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">姓名 :</label>
+                                <div class="col-lg-8">
+                                    <div class="form-control">张三</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">性别 :</label>
+                                <div class="col-lg-2">
+                                    <div class="form-control">男</div>
+                                </div>
+                                <label for="" class="col-lg-2 control-label">年龄 :</label>
+                                <div class="col-lg-3">
+                                    <div class="input-group">
+                                        <div class="form-control">71</div>
+                                        <div class="input-group-addon">岁</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">身高 :</label>
+                                <div class="col-lg-2">
+                                    <div class="input-group">
+                                        <div class="form-control">170</div>
+                                        <div class="input-group-addon">CM</div>
+                                    </div>
+                                </div>
+                                <label for="" class="col-lg-2 control-label">体重 :</label>
+                                <div class="col-lg-3">
+                                    <div class="input-group">
+                                        <div class="form-control">71</div>
+                                        <div class="input-group-addon">Kg</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">检查类型 :</label>
+                                <div class="col-lg-2">
+                                    <div class="form-control">动态心电</div>
+                                </div>
+                                <label for="" class="col-lg-2 control-label">检查时间 :</label>
+                                <div class="col-lg-3">
+                                    <div class="form-control">2015/12/03 15:30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><b>审核信息</b></h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">审核时间: </label>
+                                <div class="col-lg-8">
+                                    <div class="form-control">
+                                        2015-11-19 15:30
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">不合格类型</label>
+                                <div class="col-lg-8">
+                                    <div class="form-control">
+                                        数据筛选错误
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">审核意见</label>
+                                <div class="col-lg-8">
+                                    <textarea class="form-control" name="feedback" id="feecback" rows="2" disabled="disabled">数据筛选错误，导致分析意见出错数据筛选错误，导致分析意见出错
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><b>分析数据&报告</b></h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">心电数据: </label>
+                                <div class="col-lg-6">
+                                    <div class="form-control">
+                                        心电数据1.xxx
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <a href="javascript:void(0);" class="btn btn-primary" id="downloadBtn">重新下载数据</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="uploadFile" class="col-lg-3 control-label">分析报告: </label>
+                                <div class="col-lg-6">
+                                    <input type="file" class="form-control" id="uploadFile">
+                                </div>
+                                <div class="col-lg-2">
+                                    <a href="javascript:void(0);" class="btn btn-primary" id="cancerUploadBtn">取消上传</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <div class="col-lg-9 col-lg-offset-3 hint" id="hint"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-9 col-lg-offset-3">
+                            <a href="javascript:void(0);" class="btn btn-primary" id="submitBtn">提交结果</a>
+                            <a href="reanalysisTaskManage.html" class="btn btn-default" id="cancerBtn">取消</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="submitModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">提交成功提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>提交成功，请等待分析报告上传...</p>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="unqualifiedTaskManage.html" class="btn btn-primary">返回列表</a>
+                        <a href="" class="btn btn-default">查看所有任务</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery-2.0.3 -->
+        <script src="../../lib/jquery-2.0.3.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+        <!-- jQuery UI -->
+        <script src="../../lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+
+        <script src="../../static/js/technician/reanalysisTaskDetails.js"></script>
+    </body>
+</html>
