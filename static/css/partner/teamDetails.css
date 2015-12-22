@@ -1,0 +1,21 @@
+.team-container {
+    border: 1px solid #E8E8E8;
+    border-radius: 2px;
+    margin-top: 10px;
+    padding: 10px;
+}
+.team-container .control-label {
+    min-width: 150px;
+}
+.team-container .form-control {
+    min-width: 350px;
+}
+.team-container .form-inline {
+    padding: 5px 0 5px 5px;
+}
+.team-container .form-inline:not(:first-child) {
+    border-top: 1px dashed #dedede;
+}
+.title-container {
+    margin-top: 20px;
+}

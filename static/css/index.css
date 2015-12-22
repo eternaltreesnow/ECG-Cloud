@@ -4,8 +4,11 @@ a:hover,
 a:active {
     text-decoration: none;
 }
+.link-container {
+    margin-top: 200px;
+}
 .hospital-link {
-    margin: 200px 20px;
+    margin: 10px 20px;
     padding: 0;
     border-radius: 15px;
     background-color: #FAFAFA;
@@ -44,6 +47,26 @@ a:active {
     color: #555555;
     padding-left: 120px;
     background: url(../img/technician_57-64.png) no-repeat;
+    background-position: 8% 50%;
+}
+.partner-container {
+    cursor: pointer;
+    height: 100px;
+    line-height: 100px;
+    font-size: 24pt;
+    color: #555555;
+    padding-left: 120px;
+    background: url(../img/partner_64-36.png) no-repeat;
+    background-position: 8% 50%;
+}
+.admin-container {
+    cursor: pointer;
+    height: 100px;
+    line-height: 100px;
+    font-size: 24pt;
+    color: #555555;
+    padding-left: 100px;
+    background: url(../img/administrator_61-64.png) no-repeat;
     background-position: 8% 50%;
 }
 
