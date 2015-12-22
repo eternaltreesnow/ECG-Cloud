@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <head>
+        <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../../static/img/logo.png">
+        <title>团队详情 | 合伙人</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../../lib/bootstrap-3.3.5-dist/flatly/bootstrap.min.css">
+        <!-- jQuery UI -->
+        <link rel="stylesheet" href="../../lib/jquery-ui-1.11.4/jquery-ui.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../../lib/DataTables-1.10.8/css/dataTables.bootstrap.min.css">
+        <!-- Normalize.css -->
+        <link rel="stylesheet" href="../../lib/normalize.css">
+
+        <link rel="stylesheet" href="../../static/css/frame.css">
+        <link rel="stylesheet" href="../../static/css/partner/teamDetails.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- Warning: Respond.js doesn't work if you view the page via file:// -->
+        <!-- [if lt IE 9]>
+            <script src="../../lib/html5shiv.min.js"></script>
+            <script src="../../lib/respond.min.js"></script>
+        <![endif] -->
+    </head>
+    <body>
+        <!-- Navigation -->
+        <div class="navbar navbar-default navbar-fixed-top header" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand navbar-logo">
+                        <span class="navbar-logo-txt">ECG Cloud Platform</span>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown" role="presentation">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <span id="userName">合伙人A</span>
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="menu-link">个人信息</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a href="../index.html" class="menu-link"><span class="glyphicon glyphicon-off"></span>&nbsp;退出登录</a>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right top-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-envelope"></span>
+                                <span>Message</span>
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li class="message-preview">
+                                        <a href="#" class="menu-link">
+                                            <div class="media">
+                                                <span class="pull-left">
+                                                    <img src="../../static/img/placeholder_50.png" alt="" class="media-oject">
+                                                </span>
+                                                <div class="media-body">
+                                                    <h5 class="media-heading"><strong>John Smith</strong></h5>
+                                                    <p class="small text-muted"><i class="glyphicon glyphicon-time"></i> Yesterday at 4:32 PM</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sidebar Menu Items -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav side-nav">
+                        <li>
+                            <a href="javascript:void(0);" data-toggle="collapse" data-target="#team-drop">
+                                <span>医生团队管理</span>
+                                <span class="caret"></span>
+                            </a>
+                            <ul id="team-drop" class="">
+                                <li><a href="doctorManage.html">医生管理</a></li>
+                                <li><a href="technicianManage.html">技师管理</a></li>
+                                <li class="active"><a href="teamManage.html">团队管理</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="contractManage.html">契约管理</a>
+                        </li>
+                        <li class="">
+                            <a href="checklistManage.html">检查单管理</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row main-page">
+            <div class="path-navigation">
+                <ol class="breadcrumb">
+                    <li>医生团队管理</li>
+                    <li><a href="teamManage.html">团队管理</a></li>
+                    <li class="active">团队详情</li>
+                </ol>
+            </div>
+            <div class="container team-container">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label class="control-label">团队名称 :</label>
+                        <input type="text" class="form-control" placeholder="请输入团队名称" value="张医生团队">
+                    </div>
+                </form>
+                <form class="form-inline">
+                    <div class="pull-right">
+                        <a href="javascript:void(0);" class="btn btn-primary btn-sm" id="modifyTeamNameBtn">确认修改</a>
+                    </div>
+                </form>
+            </div>
+            <div class="container-fluid title-container">
+                <b class="table-title pull-left">医生列表</b>
+                <a href="javascript:void(0);" class="btn btn-primary btn-sm pull-right" id="addDocBtn"><span class="glyphicon glyphicon-plus"></span>&nbsp;添加医生</a>
+            </div>
+            <div class="container-fluid table-container">
+                <table class="table table-striped table-hover table-bordered" cellspacing="0" width="100%" id="doctorTable">
+                    <thead>
+                        <tr>
+                            <th>编号</th>
+                            <th>用户名</th>
+                            <th>医生姓名</th>
+                            <th>所属医院</th>
+                            <th>职称</th>
+                            <th>身份证号</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="container-fluid title-container">
+                <b class="table-title pull-left">技师列表</b>
+                <a href="javascript:void(0);" class="btn btn-primary btn-sm pull-right" id="addTechBtn"><span class="glyphicon glyphicon-plus"></span>&nbsp;添加技师</a>
+            </div>
+            <div class="container-fluid table-container">
+                <table class="table table-striped table-hover table-bordered" cellspacing="0" width="100%" id="technicianTalbe">
+                    <thead>
+                        <tr>
+                            <th>编号</th>
+                            <th>用户名</th>
+                            <th>姓名</th>
+                            <th>身份证号</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <div id="addDocModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">添加医生</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="searchDoc" placeholder="请输入id/姓名...">
+                                    <span class="input-group-btn">
+                                        <a href="javascript:void(0);" class="btn btn-primary" id="searchDocBtn">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                        <table class="table table-striped table-hover" style="display:none;" id="searchDocResult">
+                            <thead>
+                                <th>编号</th>
+                                <th>用户名</th>
+                                <th>姓名</th>
+                                <th>#</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>03</td>
+                                    <td>doctor1</td>
+                                    <td>张医生</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>05</td>
+                                    <td>doctor7</td>
+                                    <td>李医生</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn btn-primary" id="addDocModalBtn">添加</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="addTechModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">添加医生</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="searchTech" placeholder="请输入id/姓名...">
+                                    <span class="input-group-btn">
+                                        <a href="javascript:void(0);" class="btn btn-primary" id="searchTechBtn">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                        <table class="table table-striped table-hover" style="display:none;" id="searchTechResult">
+                            <thead>
+                                <th>编号</th>
+                                <th>用户名</th>
+                                <th>姓名</th>
+                                <th>#</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>02</td>
+                                    <td>technician1</td>
+                                    <td>技师A</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>05</td>
+                                    <td>technician8</td>
+                                    <td>技师E</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn btn-primary" id="addTechModalBtn">添加</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="deleteModal" class="modal fade">
+            <div class="modal-dialog">
+                <input type="hidden" id="deleteId">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">删除提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        请确认删除该团队成员?
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn btn-primary" id="confirmDeleteBtn">确认删除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="successModal" class="modal fade">
+            <div class="modal-dialog">
+                <input type="hidden" id="deleteId">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">提交成功提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        修改成功！
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn btn-primary" data-dismiss="modal">返回</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery-2.0.3 -->
+        <script src="../../lib/jquery-2.0.3.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+        <!-- jQuery UI -->
+        <script src="../../lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+        <!-- DataTables -->
+        <script src="../../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
+        <script src="../../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
+
+        <script src="../../static/js/partner/teamDetails.js"></script>
+    </body>
+</html>

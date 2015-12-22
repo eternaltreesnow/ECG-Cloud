@@ -4,24 +4,24 @@
         <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="../static/img/logo.png">
-        <title>Team Manage | ECG Cloud</title>
+        <link rel="icon" href="../../static/img/logo.png">
+        <title>团队管理 | 合伙人</title>
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/flatly/bootstrap.min.css">
+        <link rel="stylesheet" href="../../lib/bootstrap-3.3.5-dist/flatly/bootstrap.min.css">
         <!-- jQuery UI -->
-        <link rel="stylesheet" href="../lib/jquery-ui-1.11.4/jquery-ui.min.css">
+        <link rel="stylesheet" href="../../lib/jquery-ui-1.11.4/jquery-ui.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../../lib/DataTables-1.10.8/css/dataTables.bootstrap.min.css">
         <!-- Normalize.css -->
-        <link rel="stylesheet" href="../lib/normalize.css">
-        <!-- zTree_v3 -->
-        <link rel="stylesheet" href="../lib/zTree_v3/zTreeStyle.css">
+        <link rel="stylesheet" href="../../lib/normalize.css">
 
-        <link rel="stylesheet" href="../static/css/frame.css">
+        <link rel="stylesheet" href="../../static/css/frame.css">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- Warning: Respond.js doesn't work if you view the page via file:// -->
         <!-- [if lt IE 9]>
-            <script src="../lib/html5shiv.min.js"></script>
-            <script src="../lib/respond.min.js"></script>
+            <script src="../../lib/html5shiv.min.js"></script>
+            <script src="../../lib/respond.min.js"></script>
         <![endif] -->
     </head>
     <body>
@@ -45,13 +45,13 @@
                         <li class="dropdown" role="presentation">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <span class="glyphicon glyphicon-user"></span>
-                                <span id="userName">Dick</span>
+                                <span id="userName">合伙人A</span>
                                 <span class="caret"></span>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" class="menu-link">个人信息</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li>
-                                        <a href="#" class="menu-link"><span class="glyphicon glyphicon-off"></span>&nbsp;退出登录</a>
+                                        <a href="../index.html" class="menu-link"><span class="glyphicon glyphicon-off"></span>&nbsp;退出登录</a>
                                     </li>
                                 </ul>
                             </a>
@@ -68,21 +68,7 @@
                                         <a href="#" class="menu-link">
                                             <div class="media">
                                                 <span class="pull-left">
-                                                    <img src="../static/img/placeholder_50.png" alt="" class="media-oject">
-                                                </span>
-                                                <div class="media-body">
-                                                    <h5 class="media-heading"><strong>John Smith</strong></h5>
-                                                    <p class="small text-muted"><i class="glyphicon glyphicon-time"></i> Yesterday at 4:32 PM</p>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="message-preview">
-                                        <a href="#" class="menu-link">
-                                            <div class="media">
-                                                <span class="pull-left">
-                                                    <img src="../static/img/placeholder_50.png" alt="" class="media-oject">
+                                                    <img src="../../static/img/placeholder_50.png" alt="" class="media-oject">
                                                 </span>
                                                 <div class="media-body">
                                                     <h5 class="media-heading"><strong>John Smith</strong></h5>
@@ -101,27 +87,21 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav side-nav">
                         <li>
-                            <a href="#">首页</a>
-                        </li>
-                        <li>
-                            <a href="checkListManage.html">检查单管理</a>
-                        </li>
-                        <li>
                             <a href="javascript:void(0);" data-toggle="collapse" data-target="#team-drop">
-                                <span>团队管理</span>
+                                <span>医生团队管理</span>
                                 <span class="caret"></span>
                             </a>
                             <ul id="team-drop" class="">
-                                <li class="active"><a href="teamManage.html">成员管理</a></li>
-                                <li><a href="taskManage.html">任务管理</a></li>
-                                <li><a href="#">基层医院管理</a></li>
+                                <li><a href="doctorManage.html">医生管理</a></li>
+                                <li><a href="technicianManage.html">技师管理</a></li>
+                                <li class="active"><a href="teamManage.html">团队管理</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="userManage.html">用户管理</a>
+                        <li class="">
+                            <a href="contractManage.html">契约管理</a>
                         </li>
-                        <li>
-                            <a href="#">消息管理</a>
+                        <li class="">
+                            <a href="checklistManage.html">检查单管理</a>
                         </li>
                     </ul>
                 </div>
@@ -130,43 +110,41 @@
         <div class="row main-page">
             <div class="path-navigation">
                 <ol class="breadcrumb">
-                    <li><a href="#">首页</a></li>
+                    <li>医生团队管理</li>
                     <li class="active">团队管理</li>
                 </ol>
             </div>
-            <div class="col-md-4 user-management-tree">
-                <ul id="userTree" class="ztree"></ul>
+            <div class="container-fluid">
+                <b class="table-title pull-left">团队列表</b>
+                <a href="AddPartner.html" class="btn btn-primary btn-sm pull-right"><span class="glyphicon glyphicon-plus"></span>&nbsp;添加团队</a>
             </div>
-            <div class="col-md-4 user-management-detail">
-                <div id="userid"></div>
-                <div id="pid"></div>
-                <div id="username"></div>
-                <div id="usertype"></div>
+            <div class="container-fluid table-container">
+                <table class="table table-striped table-hover table-bordered" cellspacing="0" width="100%" id="teamTable">
+                    <thead>
+                        <tr>
+                            <th>编号</th>
+                            <th>团队名称</th>
+                            <th>负责人</th>
+                            <th>身份证号</th>
+                            <th>团队人数</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
-        </div>
-
-        <div class="rTreeMenu" id="rTreeMenu">
-            <ul>
-                <li id="addNodeTeam" class="rMenuNation"><span class="glyphicon glyphicon-plus"></span>&nbsp;添加团队</li>
-                <li id="addNodeDoc" class="rMenuTeam"><span class="glyphicon glyphicon-plus"></span>&nbsp;添加医生</li>
-                <li id="addNodeTech" class="rMenuDoc"><span class="glyphicon glyphicon-plus"></span>&nbsp;添加技师</li>
-                <li id="delNodeTeam" class="rMenuTeam"><span class="glyphicon glyphicon-minus"></span>&nbsp;删除团队</li>
-                <li id="delNodeDoctor" class="rMenuDoc"><span class="glyphicon glyphicon-minus"></span>&nbsp;删除医生</li>
-                <li id="delNodeTech" class="rMenuTech"><span class="glyphicon glyphicon-minus"></span>&nbsp;删除技师</li>
-                <li id="disNodeTech" class="rMenuTech"><span class="glyphicon glyphicon-off"></span>&nbsp;禁用技师</li>
-                <li id="detailNode"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;详细信息</li>
-            </ul>
         </div>
 
         <!-- jQuery-2.0.3 -->
-        <script src="../lib/jquery-2.0.3.min.js"></script>
+        <script src="../../lib/jquery-2.0.3.min.js"></script>
         <!-- Bootstrap -->
-        <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+        <script src="../../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
         <!-- jQuery UI -->
-        <script src="../lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
-        <!-- zTree_v3 -->
-        <script src="../lib/zTree_v3/jquery.ztree.core-3.5.min.js"></script>
+        <script src="../../lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+        <!-- DataTables -->
+        <script src="../../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
+        <script src="../../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
 
-        <script src="../static/js/teamManage.js"></script>
+        <script src="../../static/js/partner/teamManage.js"></script>
     </body>
 </html>
