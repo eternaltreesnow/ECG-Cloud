@@ -112,12 +112,12 @@
                 <ol class="breadcrumb">
                     <li>医生团队管理</li>
                     <li><a href="doctorManage.html">医生管理</a></li>
-                    <li class="active">添加医生</li>
+                    <li class="active">编辑医生</li>
                 </ol>
             </div>
             <div class="container-fluid" style="max-width: 1300px;">
                 <form class="form-horizontal">
-                    <legend><b>添加医生</b></legend>
+                    <legend><b>编辑医生</b></legend>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <div class="panel-title">账户信息</div>
@@ -130,15 +130,15 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputPassword" class="col-lg-3 control-label">密码</label>
+                                <label for="inputPassword" class="col-lg-3 control-label">新密码</label>
                                 <div class="col-lg-7">
-                                    <input type="text" class="form-control" id="inputPassword" name="password" placeholder="请输入密码...">
+                                    <input type="text" class="form-control" id="inputPassword" name="password" placeholder="请输入新密码...">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="rePassword" class="col-lg-3 control-label">重复密码</label>
+                                <label for="rePassword" class="col-lg-3 control-label">重复新密码</label>
                                 <div class="col-lg-7">
-                                    <input type="text" class="form-control" id="rePassword" placeholder="请重复输入密码...">
+                                    <input type="text" class="form-control" id="rePassword" placeholder="请重复输入新密码...">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -150,7 +150,6 @@
                                     </select>
                                 </div>
                             </div>
-                            <input type="hidden" id="inputTime" name="time">
                         </div>
                     </div>
                     <div class="panel panel-default">
@@ -177,9 +176,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputContact" class="col-lg-3 control-label">邮箱</label>
+                                <label for="inputEmail" class="col-lg-3 control-label">邮箱</label>
                                 <div class="col-lg-7">
-                                    <input type="text" class="form-control" id="inputContact" name="contact" placeholder="请输入联系方式...">
+                                    <input type="text" class="form-control" id="inputEmail" name="email" placeholder="请输入邮箱...">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -269,7 +268,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-lg-8 col-lg-offset-3">
-                            <a href="javascript:void(0);" class="btn btn-primary" id="submitBtn">提交</a>
+                            <a href="javascript:void(0);" class="btn btn-primary" id="submitBtn">修改</a>
                             <a href="doctorManage.html" class="btn btn-default" id="cancerBtn">取消</a>
                         </div>
                     </div>
@@ -287,6 +286,6 @@
         <script src="../../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
         <script src="../../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
 
-        <script src="../../static/js/partner/doctorManage.js"></script>
+        <script src="../../static/js/partner/EditDoctor.js"></script>
     </body>
 </html>

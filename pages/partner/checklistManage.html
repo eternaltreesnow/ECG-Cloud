@@ -114,22 +114,108 @@
                 </ol>
             </div>
             <div class="container-fluid">
-                <b class="table-title pull-left">检查单列表</b>
+                <b class="table-title pull-left">检查单(超过一周未处理)</b>
             </div>
             <div class="container-fluid table-container">
-                <table class="table table-striped table-hover table-bordered" cellspacing="0" width="100%" id="partnerTable">
+                <table class="table table-striped table-hover table-bordered" cellspacing="0" width="100%" id="oldestTable">
                     <thead>
                         <tr>
                             <th>编号</th>
-                            <th>用户名</th>
-                            <th>负责人</th>
-                            <th>身份证号</th>
+                            <th>患者姓名</th>
+                            <th>年龄</th>
+                            <th>所属医院</th>
+                            <th>检查类型</th>
                             <th>创建时间</th>
-                            <th>状态</th>
+                            <th>现分配团队</th>
                             <th>操作</th>
                         </tr>
                     </thead>
                 </table>
+            </div>
+            <div class="container-fluid">
+                <b class="table-title pull-left">检查单(未处理)</b>
+            </div>
+            <div class="container-fluid table-container">
+                <table class="table table-striped table-hover table-bordered" cellspacing="0" width="100%" id="currentTable">
+                    <thead>
+                        <tr>
+                            <th>编号</th>
+                            <th>患者姓名</th>
+                            <th>年龄</th>
+                            <th>所属医院</th>
+                            <th>检查类型</th>
+                            <th>创建时间</th>
+                            <th>现分配团队</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <div id="distModal" class="modal fade">
+            <div class="modal-dialog">
+                <input type="hidden" id="distId">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">重新分配</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <label>请选择分配的医生团队 :</label>
+                            <select name="team" id="selectTeam" class="form-control">
+                                <option value="1">张教授团队</option>
+                                <option value="2">王教授团队</option>
+                                <option value="3">李教授团队</option>
+                                <option value="4">郑教授团队</option>
+                                <option value="5">钟教授团队</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn btn-primary" id="distModalBtn">确认</a>
+                        <a href="javascript:void(0);" class="btn btn-default" data-dismiss="modal">返回</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="recordModal" class="modal fade">
+            <div class="modal-dialog">
+                <input type="hidden" id="recordId">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">检查单分配记录</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>团队</th>
+                                    <th>时间</th>
+                                    <th>分配类型</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>李教授团队</td>
+                                    <td>2015-12-03 15:39</td>
+                                    <td>系统自动分配</td>
+                                </tr>
+                                <tr>
+                                    <td>张教授团队</td>
+                                    <td>2015-12-04 16:45</td>
+                                    <td>手动分配</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn btn-default" data-dismiss="modal">返回</a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -143,6 +229,6 @@
         <script src="../../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
         <script src="../../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
 
-        <script src="../../static/js/admin/partnerManage.js"></script>
+        <script src="../../static/js/partner/checklistManage.js"></script>
     </body>
 </html>

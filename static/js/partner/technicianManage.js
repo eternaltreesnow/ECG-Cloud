@@ -1,6 +1,7 @@
 $(function() {
     var $technicianTable;
     var $linkEdit, $linkDelete;
+    var $stopModal, $stopId, $stopModalBtn, $deleteModal, $deleteId, $deleteModalBtn;
 
     var tempdata = [
         {
@@ -116,5 +117,29 @@ $(function() {
         var $this = $(this);
         var id = $this.parents("tr").children(":first").html();
         location.href = "EditTechnician.html?id=" + id;
+    });
+
+    $stopModal = $("#stopModal");
+    $stopId = $("#stopId");
+    $stopModalBtn = $("#stopModalBtn");
+    $linkStop.on('click', function() {
+        var $this = $(this);
+        $stopId.val($this.parents("tr").children(":first").html());
+        $stopModal.modal('show');
+    });
+    $stopModalBtn.on('click', function() {
+        $stopModal.modal('hide');
+    });
+
+    $deleteModal = $("#deleteModal");
+    $deleteId = $("#deleteId");
+    $deleteModalBtn = $("#deleteModalBtn");
+    $linkDelete.on('click', function() {
+        var $this = $(this);
+        $deleteId.val($this.parents("tr").children(":first").html());
+        $deleteModal.modal('show');
+    });
+    $deleteModalBtn.on('click', function() {
+        $deleteModal.modal('hide');
     });
 });

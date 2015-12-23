@@ -137,6 +137,44 @@
             </div>
         </div>
 
+        <div id="stopModal" class="modal fade">
+            <div class="modal-dialog">
+                <input type="hidden" id="stopId">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">停用状态修改提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        确认停用该医生状态?
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn btn-primary" id="stopModalBtn">确认</a>
+                        <a href="javascript:void(0);" class="btn btn-primary" data-dismiss="modal">返回</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="deleteModal" class="modal fade">
+            <div class="modal-dialog">
+                <input type="hidden" id="deleteId">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">删除提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        确认删除该医生?
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn btn-primary" id="deleteModalBtn">确认</a>
+                        <a href="javascript:void(0);" class="btn btn-primary" data-dismiss="modal">返回</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- jQuery-2.0.3 -->
         <script src="../../lib/jquery-2.0.3.min.js"></script>
         <!-- Bootstrap -->

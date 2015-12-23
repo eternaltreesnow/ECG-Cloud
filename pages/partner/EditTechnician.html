@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="../../static/img/logo.png">
-        <title>添加医生 | 合伙人</title>
+        <title>编辑技师 | 合伙人</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../../lib/bootstrap-3.3.5-dist/flatly/bootstrap.min.css">
         <!-- jQuery UI -->
@@ -92,8 +92,8 @@
                                 <span class="caret"></span>
                             </a>
                             <ul id="team-drop" class="">
-                                <li class="active"><a href="doctorManage.html">医生管理</a></li>
-                                <li><a href="technicianManage.html">技师管理</a></li>
+                                <li><a href="doctorManage.html">医生管理</a></li>
+                                <li class="active"><a href="technicianManage.html">技师管理</a></li>
                                 <li><a href="teamManage.html">团队管理</a></li>
                             </ul>
                         </li>
@@ -111,13 +111,13 @@
             <div class="path-navigation">
                 <ol class="breadcrumb">
                     <li>医生团队管理</li>
-                    <li><a href="doctorManage.html">医生管理</a></li>
-                    <li class="active">添加医生</li>
+                    <li><a href="technicianManage.html">技师管理</a></li>
+                    <li class="active">编辑技师</li>
                 </ol>
             </div>
             <div class="container-fluid" style="max-width: 1300px;">
                 <form class="form-horizontal">
-                    <legend><b>添加医生</b></legend>
+                    <legend><b>编辑技师</b></legend>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <div class="panel-title">账户信息</div>
@@ -177,9 +177,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputContact" class="col-lg-3 control-label">邮箱</label>
+                                <label for="inputEmail" class="col-lg-3 control-label">邮箱</label>
                                 <div class="col-lg-7">
-                                    <input type="text" class="form-control" id="inputContact" name="contact" placeholder="请输入联系方式...">
+                                    <input type="text" class="form-control" id="inputEmail" name="email" placeholder="请输入邮箱...">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -202,45 +202,6 @@
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
-                                <label for="inputHospital" class="col-lg-3 control-label">所属医院</label>
-                                <div class="col-lg-7">
-                                    <input type="text" class="form-control" id="inputHospital" name="hospital" placeholder="请输入所属医院...">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputOffice" class="col-lg-3 control-label">科室/职务</label>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control" id="inputOffice" name="office" placeholder="请输入科室...">
-                                </div>
-                                <div class="col-lg-3">
-                                    <input type="text" class="form-control" id="inputJob" name="job" placeholder="请输入职务...">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputTechTitle" class="col-lg-3 control-label">职称</label>
-                                <div class="col-lg-7">
-                                    <input type="text" class="form-control" id="inputTechTitle" name="techtitle" placeholder="请输入职称...">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputQual" class="col-lg-3 control-label">医师资格证书编码</label>
-                                <div class="col-lg-5">
-                                    <input type="text" class="form-control" id="inputQual" name="qual" placeholder="请输入医师资格证书编码...">
-                                </div>
-                                <div class="col-lg-2">
-                                    <input type="text" class="form-control" id="inputQualTime" name="qualtime" placeholder="请输入发证时间...">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputPract" class="col-lg-3 control-label">医师执业证书编码</label>
-                                <div class="col-lg-5">
-                                    <input type="text" class="form-control" id="inputPract" name="pract" placeholder="请输入医师执业证书编码...">
-                                </div>
-                                <div class="col-lg-2">
-                                    <input type="text" class="form-control" id="inputPractTime" name="practtime" placeholder="请输入发证时间...">
-                                </div>
-                            </div>
-                            <div class="form-group">
                                 <label for="inputSchool" class="col-lg-3 control-label">毕业院校及专业</label>
                                 <div class="col-lg-4">
                                     <input type="text" class="form-control" id="inputSchool" name="school" placeholder="请输入毕业院校...">
@@ -252,17 +213,25 @@
                             <div class="form-group">
                                 <label for="" class="col-lg-3 control-label">职业培训情况(含进修和培训)</label>
                                 <div class="col-lg-7">
-                                    <textarea name="" id="" class="form-control" rows="3">
-
-                                    </textarea>
+                                    <textarea name="" id="" class="form-control" rows="3"></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="" class="col-lg-3 control-label">科研工作情况(项目名称/编号/来源/年度)</label>
+                                <label for="" class="col-lg-3 control-label">资格证书获取情况</label>
                                 <div class="col-lg-7">
-                                    <textarea name="" id="" class="form-control" rows="3">
-
-                                    </textarea>
+                                    <textarea name="" id="" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">从业经验</label>
+                                <div class="col-lg-7">
+                                    <textarea name="" id="" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">专业特长</label>
+                                <div class="col-lg-7">
+                                    <textarea name="" id="" class="form-control" rows="3"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -287,6 +256,6 @@
         <script src="../../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
         <script src="../../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
 
-        <script src="../../static/js/partner/doctorManage.js"></script>
+        <script src="../../static/js/partner/EditTechnician.js"></script>
     </body>
 </html>
