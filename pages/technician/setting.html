@@ -5,22 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="../../static/img/logo.png">
-        <title>已完成任务 | 技师</title>
+        <title>系统设置 | 技师</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../../lib/bootstrap-3.3.5-dist/flatly/bootstrap.min.css">
         <!-- jQuery UI -->
         <link rel="stylesheet" href="../../lib/jquery-ui-1.11.4/jquery-ui.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../../lib/DataTables-1.10.8/css/dataTables.bootstrap.min.css">
         <!-- Normalize.css -->
         <link rel="stylesheet" href="../../lib/normalize.css">
 
         <link rel="stylesheet" href="../../static/css/frame.css">
-        <link rel="stylesheet" href="../../static/css/technician/finishedTaskManage.css">
+        <link rel="stylesheet" href="../../static/css/technician/reanalysisTaskManage.css">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- Warning: Respond.js doesn't work if you view the page via file:// -->
         <!-- [if lt IE 9]>
-            <script src="../../lib/html5shiv.min.js"></script>
-            <script src="../../lib/respond.min.js"></script>
+            <script src="../lib/html5shiv.min.js"></script>
+            <script src="../lib/respond.min.js"></script>
         <![endif] -->
     </head>
     <body>
@@ -77,6 +79,20 @@
                                             </div>
                                         </a>
                                     </li>
+                                    <li class="message-preview">
+                                        <a href="#" class="menu-link">
+                                            <div class="media">
+                                                <span class="pull-left">
+                                                    <img src="../../static/img/placeholder_50.png" alt="" class="media-oject">
+                                                </span>
+                                                <div class="media-body">
+                                                    <h5 class="media-heading"><strong>John Smith</strong></h5>
+                                                    <p class="small text-muted"><i class="glyphicon glyphicon-time"></i> Yesterday at 4:32 PM</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
                                 </ul>
                             </a>
                         </li>
@@ -90,14 +106,14 @@
                                 <span>任务管理</span>
                                 <span class="caret"></span>
                             </a>
-                            <ul id="task-drop" class="">
+                            <ul id="task-drop" class="collapse">
                                 <li><a href="unoccupiedTaskManage.html">可接任务</a></li>
                                 <li><a href="occupiedTaskManage.html">已接任务</a></li>
                                 <li><a href="reanalysisTaskManage.html">重分析任务</a></li>
-                                <li class="active"><a href="finishedTaskManage.html">已完成任务</a></li>
+                                <li><a href="finishedTaskManage.html">已完成任务</a></li>
                             </ul>
                         </li>
-                        <li><a href="setting.html">系统设置</a></li>
+                        <li class="active"><a href="setting.html">系统设置</a></li>
                     </ul>
                 </div>
             </div>
@@ -105,119 +121,49 @@
         <div class="row main-page">
             <div class="path-navigation">
                 <ol class="breadcrumb">
-                    <li><a href="">任务管理</a></li>
-                    <li><a href="finishedTaskManage.html">已完成任务</a></li>
-                    <li class="active">任务详情</li>
+                    <li class="active">系统设置</li>
                 </ol>
             </div>
-            <div class="container task-form">
+            <div class="container">
                 <form class="form-horizontal">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4 class="panel-title"><b>基本信息</b></h4>
+                            <div class="panel-title">业务设置</div>
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
-                                <label for="" class="col-lg-3 control-label">姓名 :</label>
-                                <div class="col-lg-8">
-                                    <div class="form-control">张三</div>
+                                <label for="inputLimit" class="col-lg-3 control-label">单日业务量上限(单)</label>
+                                <div class="col-lg-7">
+                                    <input type="text" class="form-control" id="inputLimit" name="limit" placeholder="请输入数量上限">
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="col-lg-3 control-label">性别 :</label>
-                                <div class="col-lg-2">
-                                    <div class="form-control">男</div>
-                                </div>
-                                <label for="" class="col-lg-2 control-label">年龄 :</label>
-                                <div class="col-lg-3">
-                                    <div class="input-group">
-                                        <div class="form-control">71</div>
-                                        <div class="input-group-addon">岁</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="col-lg-3 control-label">身高 :</label>
-                                <div class="col-lg-2">
-                                    <div class="input-group">
-                                        <div class="form-control">170</div>
-                                        <div class="input-group-addon">CM</div>
-                                    </div>
-                                </div>
-                                <label for="" class="col-lg-2 control-label">体重 :</label>
-                                <div class="col-lg-3">
-                                    <div class="input-group">
-                                        <div class="form-control">71</div>
-                                        <div class="input-group-addon">Kg</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="col-lg-3 control-label">检查类型 :</label>
-                                <div class="col-lg-2">
-                                    <div class="form-control">动态心电</div>
-                                </div>
-                                <label for="" class="col-lg-2 control-label">检查时间 :</label>
-                                <div class="col-lg-3">
-                                    <div class="form-control">2015/12/03 15:30</div>
-                                </div>
+                                <div class="col-lg-2" style="line-height:43px;">(默认为无上限)</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title"><b>审核信息</b></h4>
-                        </div>
-                        <div class="panel-body">
-                            <div class="form-group">
-                                <label for="" class="col-lg-3 control-label">审核时间: </label>
-                                <div class="col-lg-8">
-                                    <div class="form-control">
-                                        2015-11-19 15:30
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="col-lg-3 control-label">审核意见</label>
-                                <div class="col-lg-8">
-                                    <textarea class="form-control" name="feedback" id="feecback" rows="2" disabled="disabled">数据筛选正确，能够准确判断患者心室异常
-                                    </textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="" class="col-lg-3 control-label">心电数据: </label>
-                                <div class="col-lg-6">
-                                    <div class="form-control">
-                                        心电数据1.xxx
-                                    </div>
-                                </div>
-                                <div class="col-lg-2">
-                                    <a href="javascript:void(0);" class="btn btn-primary" id="downloadBtn">下载数据</a>
-                                </div>
-                            </div>
-                             <div class="form-group">
-                                <label for="" class="col-lg-3 control-label">最终报告: </label>
-                                <div class="col-lg-6">
-                                    <div class="form-control">
-                                        最终报告.xxx
-                                    </div>
-                                </div>
-                                <div class="col-lg-2">
-                                    <a href="javascript:void(0);" class="btn btn-primary" id="downloadBtn">下载报告</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-lg-9 col-lg-offset-3 hint" id="hint"></div>
                     </div>
                     <div class="form-group">
-                        <div class="col-lg-9 col-lg-offset-3">
-                            <a href="finishedTaskManage.html" class="btn btn-primary" id="cancerBtn">返回列表</a>
+                        <div class="col-lg-7 col-lg-offset-3">
+                            <a href="javascript:void(0);" id="submitBtn" class="btn btn-primary">确认修改</a>
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+
+        <div id="submitModal" class="modal fade">
+            <div class="modal-dialog">
+                <input type="hidden" id="stopId">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">修改提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        修改成功!
+                    </div>
+                    <div class="modal-footer">
+                        <a href="javascript:void(0);" class="btn btn-primary" data-dismiss="modal">返回</a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -227,7 +173,10 @@
         <script src="../../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
         <!-- jQuery UI -->
         <script src="../../lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+        <!-- DataTables -->
+        <script src="../../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
+        <script src="../../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
 
-        <script src="../../static/js/technician/finishedTaskManage.js"></script>
+        <script src="../../static/js/technician/setting.js"></script>
     </body>
 </html>
