@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="../../static/img/logo.png">
-        <title>合伙人管理 | 系统管理员</title>
+        <title>编辑合伙人 | 系统管理员</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../../lib/bootstrap-3.3.5-dist/flatly/bootstrap.min.css">
         <!-- jQuery UI -->
@@ -99,84 +99,92 @@
         <div class="row main-page">
             <div class="path-navigation">
                 <ol class="breadcrumb">
-                    <li class="active">合伙人管理</li>
+                    <li><a href="partnerManage.html">合伙人管理</a></li>
+                    <li class="active">编辑合伙人</li>
                 </ol>
             </div>
-            <div class="container-fluid">
-                <b class="table-title pull-left">合伙人列表</b>
-                <a href="AddPartner.html" class="btn btn-primary btn-sm pull-right"><span class="glyphicon glyphicon-plus"></span>&nbsp;添加合伙人</a>
-            </div>
-            <div class="container-fluid table-container">
-                <table class="table table-striped table-hover table-bordered" cellspacing="0" width="100%" id="partnerTable">
-                    <thead>
-                        <tr>
-                            <th>编号</th>
-                            <th>用户名</th>
-                            <th>负责人</th>
-                            <th>身份证号</th>
-                            <th>创建时间</th>
-                            <th>状态</th>
-                            <th>操作</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
-        </div>
-
-        <div id="stopModal" class="modal fade">
-            <div class="modal-dialog">
-                <input type="hidden" id="stopId">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">停用状态修改提示</h4>
+            <div class="container upload-form">
+                <form class="form-horizontal">
+                    <legend><b>编辑合伙人</b></legend>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">账户信息</div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="inputUsername" class="col-lg-3 control-label">用户名</label>
+                                <div class="col-lg-7">
+                                    <input type="text" class="form-control" id="inputUsername" name="username" placeholder="请输入用户名...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword" class="col-lg-3 control-label">新密码</label>
+                                <div class="col-lg-7">
+                                    <input type="text" class="form-control" id="inputPassword" name="password" placeholder="请输入新密码...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="rePassword" class="col-lg-3 control-label">重复新密码</label>
+                                <div class="col-lg-7">
+                                    <input type="text" class="form-control" id="rePassword" placeholder="请重复输入新密码...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">状态</label>
+                                <div class="col-lg-7">
+                                    <select name="status" id="selectStatus" class="form-control">
+                                        <option value="1">正常使用</option>
+                                        <option value="0">停用</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <input type="hidden" id="inputTime" name="time">
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        确认停用该合伙人状态?
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">基本信息</div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="inputManager" class="col-lg-3 control-label">负责人</label>
+                                <div class="col-lg-7">
+                                    <input type="text" class="form-control" id="inputManager" name="manager" placeholder="请输入负责人姓名...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputIdentify" class="col-lg-3 control-label">身份证号</label>
+                                <div class="col-lg-7">
+                                    <input type="text" class="form-control" id="inputIdentify" name="identify" placeholder="请输入负责人身份证号...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputContact" class="col-lg-3 control-label">联系方式</label>
+                                <div class="col-lg-7">
+                                    <input type="text" class="form-control" id="inputContact" name="contact" placeholder="请输入联系方式...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-lg-3 control-label">邮箱</label>
+                                <div class="col-lg-7">
+                                    <input type="text" class="form-control" id="inputEmail" name="email" placeholder="请输入邮箱...">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputArea" class="col-lg-3 control-label">通讯地址</label>
+                                <div class="col-lg-7">
+                                    <input type="text" class="form-control" id="inputArea" name="area" placeholder="请输入通讯地址...">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <a href="javascript:void(0);" class="btn btn-primary" id="stopModalBtn">确认</a>
-                        <a href="javascript:void(0);" class="btn btn-primary" data-dismiss="modal">返回</a>
+                    <div class="form-group">
+                        <div class="col-lg-8 col-lg-offset-3">
+                            <a href="javascript:void(0);" class="btn btn-primary" id="submitBtn">提交</a>
+                            <a href="partnerManage.html" class="btn btn-default" id="cancerBtn">取消</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="deleteModal" class="modal fade">
-            <div class="modal-dialog">
-                <input type="hidden" id="deleteId">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">删除提示</h4>
-                    </div>
-                    <div class="modal-body">
-                        确认删除该合伙人?
-                    </div>
-                    <div class="modal-footer">
-                        <a href="javascript:void(0);" class="btn btn-primary" id="deleteModalBtn">确认</a>
-                        <a href="javascript:void(0);" class="btn btn-primary" data-dismiss="modal">返回</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="startModal" class="modal fade">
-            <div class="modal-dialog">
-                <input type="hidden" id="startId">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">启用提示</h4>
-                    </div>
-                    <div class="modal-body">
-                        确认启用该技师?
-                    </div>
-                    <div class="modal-footer">
-                        <a href="javascript:void(0);" class="btn btn-primary" id="startModalBtn">确认</a>
-                        <a href="javascript:void(0);" class="btn btn-primary" data-dismiss="modal">返回</a>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
 
@@ -190,6 +198,6 @@
         <script src="../../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
         <script src="../../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
 
-        <script src="../../static/js/admin/partnerManage.js"></script>
+        <script src="../../static/js/admin/EditPartner.js"></script>
     </body>
 </html>
