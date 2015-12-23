@@ -5,11 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="../../static/img/logo.png">
-        <title>编辑会诊 | 医生</title>
+        <title>我的技师 | 医生</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../../lib/bootstrap-3.3.5-dist/flatly/bootstrap.min.css">
         <!-- jQuery UI -->
         <link rel="stylesheet" href="../../lib/jquery-ui-1.11.4/jquery-ui.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../../lib/DataTables-1.10.8/css/dataTables.bootstrap.min.css">
         <!-- Normalize.css -->
         <link rel="stylesheet" href="../../lib/normalize.css">
 
@@ -90,7 +92,7 @@
                                 <span class="caret"></span>
                             </a>
                             <ul id="task-drop" class="collapse">
-                                <li><a href="uncheckTaskManage.html">待审核任务</a></li>
+                                <li><a href="uncheckTaskManage.html">待审核任务<span class="badge pull-right">5</span></a></li>
                                 <li><a href="">所有任务</a></li>
                             </ul>
                         </li>
@@ -99,12 +101,12 @@
                                 <span>会诊管理</span>
                                 <span class="caret"></span>
                             </a>
-                            <ul id="consultation-drop" class="">
-                                <li class="active"><a href="initConsultManage.html">发起的会诊</a></li>
+                            <ul id="consultation-drop" class="collapse">
+                                <li><a href="initConsultManage.html">发起的会诊</a></li>
                                 <li><a href="joinConsultManage.html">参加的会诊</a></li>
                             </ul>
                         </li>
-                        <li><a href="techManage.html">我的技师</a></li>
+                        <li class="active"><a href="techManage.html">我的技师</a></li>
                         <li><a href="setting.html">系统设置</a></li>
                     </ul>
                 </div>
@@ -113,111 +115,102 @@
         <div class="row main-page">
             <div class="path-navigation">
                 <ol class="breadcrumb">
-                    <li><a href="">会诊管理</a></li>
-                    <li><a href="initConsultManage.html">发起的会诊</a></li>
-                    <li class="active">编辑会诊</li>
+                    <li><a href="techManage.html">技师管理</a></li>
+                    <li class="active">技师信息</li>
                 </ol>
             </div>
-            <div class="container consult-form">
+            <div class="container-fluid" style="max-width: 1300px;">
                 <form class="form-horizontal">
-                    <input type="hidden" id="id">
+                    <legend><b>技师信息</b></legend>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4 class="panel-title"><b>会诊信息</b></h4>
+                            <div class="panel-title">基本信息</div>
                         </div>
                         <div class="panel-body">
                             <div class="form-group">
-                                <label for="inputTitle" class="col-lg-2 control-label">标题 :</label>
-                                <div class="col-lg-9">
-                                    <input type="text" id="inputTitle" class="form-control" placeholder="请输入会诊标题..." value="标题1xxx">
+                                <label for="inputManager" class="col-lg-3 control-label">姓名</label>
+                                <div class="col-lg-7">
+                                    <div class="form-control" id="inputManager"></div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputCheckId" class="col-lg-2 control-label">检查单(id) :</label>
-                                <div class="col-lg-9">
-                                    <input type="text" id="inputCheckId" class="form-control" value="001" disabled="disabled">
+                                <label for="inputIdentify" class="col-lg-3 control-label">身份证号</label>
+                                <div class="col-lg-7">
+                                    <div class="form-control" id="inputIdentify"></div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="uploadReport" class="col-lg-2 control-label">分析报告: </label>
-                                <div class="col-lg-6">
-                                    <div class="form-control">
-                                        心电报告xx.xxxx
-                                    </div>
-                                </div>
-                                <div class="col-lg-2">
-                                    <a href="javascript:void(0);" class="btn btn-primary" id="uploadReportBtn">重新上传</a>
+                                <label for="inputContact" class="col-lg-3 control-label">联系方式</label>
+                                <div class="col-lg-7">
+                                    <div class="form-control" id="inputContact"></div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="uploadECGData" class="col-lg-2 control-label">心电数据: </label>
-                                <div class="col-lg-6">
-                                    <div class="form-control">
-                                        心电数据xx.xxxx
-                                    </div>
-                                </div>
-                                <div class="col-lg-2">
-                                    <a href="javascript:void(0);" class="btn btn-primary" id="uploadECGDataBtn">重新上传</a>
+                                <label for="inputEmail" class="col-lg-3 control-label">邮箱</label>
+                                <div class="col-lg-7">
+                                    <div class="form-control" id="inputEmail"></div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputExplain" class="col-lg-2 control-label">会诊说明 :</label>
-                                <div class="col-lg-9">
-                                    <textarea class="form-control" name="inputExplain" id="inputExplain" rows="4">简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明简要说明
-                                    </textarea>
+                                <label for="inputArea" class="col-lg-3 control-label">通讯地址</label>
+                                <div class="col-lg-7">
+                                    <div class="form-control" id="inputArea"></div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="selectDoc" class="col-md-2 control-label">选择会诊医生 :</label>
-                                <div class="col-md-4">
-                                    <select name="from[]" id="selectDoc" class="form-control" size="8" multiple="multiple">
-                                        <option value="1">DocA</option>
-                                        <option value="2">DocB</option>
-                                        <option value="3">DocC</option>
-                                        <option value="4">DocD</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-1">
-                                    <button type="button" id="multi_rightAll" class="btn btn-primary btn-sm btn-block"><span class="glyphicon glyphicon-forward"></span></button>
-                                    <button type="button" id="multi_rightSelected" class="btn btn-primary btn-sm btn-block"><span class="glyphicon glyphicon-chevron-right"></span></button>
-                                    <button type="button" id="multi_leftSelected" class="btn btn-primary btn-sm btn-block"><span class="glyphicon glyphicon-chevron-left"></span></button>
-                                    <button type="button" id="multi_leftAll" class="btn btn-primary btn-sm btn-block"><span class="glyphicon glyphicon-backward"></span></button>
-                                </div>
-                                <div class="col-md-4">
-                                    <select name="to[]" id="selectDoc_to" class="form-control" size="10" multiple="multiple">
-                                        <option value="5">DocE</option>
-                                        <option value="6">DocF</option>
-                                        <option value="7">DocG</option>
-                                        <option value="8">DocH</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-lg-9 col-lg-offset-2">
-                                    <a href="#" class="btn btn-primary" id="submitBtn">保存并提交</a>
+                                <label for="inputHousehold" class="col-lg-3 control-label">户口所在地</label>
+                                <div class="col-lg-7">
+                                    <div class="form-control" id="inputHousehold"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">专业信息</div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group">
+                                <label for="inputSchool" class="col-lg-3 control-label">毕业院校及专业</label>
+                                <div class="col-lg-4">
+                                    <div class="form-control" id="inputSchool"></div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="form-control" id="inputMajor"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">职业培训情况(含进修和培训)</label>
+                                <div class="col-lg-7">
+                                    <textarea name="" id="" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">资格证书获取情况</label>
+                                <div class="col-lg-7">
+                                    <textarea name="" id="" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">从业经验</label>
+                                <div class="col-lg-7">
+                                    <textarea name="" id="" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-lg-3 control-label">专业特长</label>
+                                <div class="col-lg-7">
+                                    <textarea name="" id="" class="form-control" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-8 col-lg-offset-3">
+                            <a href="techManage.html" class="btn btn-default">返回</a>
+                        </div>
+                    </div>
                 </form>
-            </div>
-        </div>
-
-        <div id="submitModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">提交成功提示</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>修改会诊成功...</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="initConsultManage.html" class="btn btn-primary">返回会诊列表</a>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -227,9 +220,10 @@
         <script src="../../lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
         <!-- jQuery UI -->
         <script src="../../lib/jquery-ui-1.11.4/jquery-ui.min.js"></script>
-        <!-- jQuery multiselect plugin with two sides -->
-        <script src="../../lib/jquery-multiselect/multiselect.min.js"></script>
+        <!-- DataTables -->
+        <script src="../../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
+        <script src="../../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
 
-        <script src="../../static/js/doctor/editConsult.js"></script>
+        <script src="../../static/js/doctor/techDetails.js"></script>
     </body>
 </html>
