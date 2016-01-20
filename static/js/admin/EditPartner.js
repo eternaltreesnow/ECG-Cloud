@@ -2,6 +2,9 @@ $(function() {
     var $inputUsername, $inputPassword, $rePassword, $selectStatus;
     var $inputManager, $inputIdentify, $inputContact, $inputEmail, $inputArea;
 
+    var ids = [1];
+    initialMenuTreeByIds(ids);
+
     $inputUsername = $("#inputUsername");
     $inputPassword = $("#inputPassword");
     $rePassword = $("#rePassword");
@@ -16,12 +19,12 @@ $(function() {
     $inputMajor = $("#inputMajor");
 
     var tempdata = {
-        "username" : "username1",
-        "manager" : "张奇峰",
-        "identify" : "440003********4344",
-        "contact" : "13300000000",
-        "email" : "xxxxx@qq.com",
-        "area" : "广东省广州市番禺区大学城外环东路112号"
+        "username": "username1",
+        "manager": "张奇峰",
+        "identify": "440003********4344",
+        "contact": "13300000000",
+        "email": "xxxxx@qq.com",
+        "area": "广东省广州市番禺区大学城外环东路112号"
     };
 
     $inputUsername.val(tempdata['username']);

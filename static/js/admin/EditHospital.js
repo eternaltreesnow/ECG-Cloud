@@ -2,6 +2,9 @@ $(function() {
     var $inputUsername, $inputPassword, $rePassword, $selectStatus;
     var $inputName, $selectGrade, $selectLevel, $inputManager, $inputIdentify, $inputContact, $inputPostcode, $inputArea, $inputIntro;
 
+    var ids = [2];
+    initialMenuTreeByIds(ids);
+
     $inputUsername = $("#inputUsername");
     $inputPassword = $("#inputPassword");
     $rePassword = $("#rePassword");
@@ -17,14 +20,14 @@ $(function() {
     $inputIntro = $("#inputIntro");
 
     var tempdata = {
-        "username" : "username1",
-        "name" : "小谷围社区医院",
-        "manager" : "张奇峰",
-        "identify" : "440003********4344",
-        "contact" : "13300000000",
-        "postcode" : "510006",
-        "area" : "广东省广州市番禺区大学城外环东路112号",
-        "intro" : "坐落于大学城的小谷围社区医院，服务覆盖大学城中环东路一带居民，覆盖人数约为24000人。"
+        "username": "username1",
+        "name": "小谷围社区医院",
+        "manager": "张奇峰",
+        "identify": "440003********4344",
+        "contact": "13300000000",
+        "postcode": "510006",
+        "area": "广东省广州市番禺区大学城外环东路112号",
+        "intro": "坐落于大学城的小谷围社区医院，服务覆盖大学城中环东路一带居民，覆盖人数约为24000人。"
     };
 
     $inputUsername.val(tempdata['username']);

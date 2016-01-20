@@ -3,10 +3,13 @@ $(function() {
     var $datetimepicker;
     var $submitBtn, $submitModal;
 
+    var ids = [2, 21];
+    initialMenuTreeByIds(ids);
+
     var $inputCheckId;
     $inputCheckId = $("#inputCheckId");
     var id = location.search.substr(1).split("&")[0].split("=")[1];
-    if(id != null) {
+    if (id != null) {
         $inputCheckId.val(id);
         $inputCheckId.attr('disabled', 'disabled');
     } else {
@@ -31,8 +34,8 @@ $(function() {
     $submitBtn = $("#submitBtn");
     $submitBtn.on('click', function() {
         $submitModal.modal({
-            'backdrop' : "static",
-            'show' : true
+            'backdrop': "static",
+            'show': true
         });
     });
 });

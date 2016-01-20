@@ -11,6 +11,9 @@ $(function() {
     $inputFile = $("#inputFile");
     $submitModal = $("#submitModal");
 
+    var ids = [1];
+    initialMenuTreeByIds(ids);
+
     $submitBtn.on('click', function() {
         $submitModal.modal({
             backdrop: 'static',

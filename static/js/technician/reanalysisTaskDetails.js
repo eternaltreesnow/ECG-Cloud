@@ -4,6 +4,9 @@ $(function() {
     var $hint;
     var $submitModal;
 
+    var ids = [1, 13];
+    initialMenuTreeByIds(ids);
+
     $submitBtn = $("#submitBtn");
     $uploadFile = $("#uploadFile");
     $hint = $("#hint");
@@ -11,7 +14,7 @@ $(function() {
     $cancerUploadBtn = $("#cancerUploadBtn");
 
     $submitBtn.on('click', function() {
-        if($uploadFile.val() === "") {
+        if ($uploadFile.val() === "") {
             $hint.html("请上传分析报告后提交...");
             setTimeout(function() {
                 $hint.html("");

@@ -3,7 +3,7 @@ $(function() {
     var $inputManager, $inputIdentify, $inputContact, $inputEmail, $inputArea, $inputHousehold;
     var $inputSchool, $inputMajor,
 
-    $inputUsername = $("#inputUsername");
+        $inputUsername = $("#inputUsername");
     $inputPassword = $("#inputPassword");
     $rePassword = $("#rePassword");
     $selectStatus = $("#selectStatus");
@@ -16,16 +16,19 @@ $(function() {
     $inputSchool = $("#inputSchool");
     $inputMajor = $("#inputMajor");
 
+    var ids = [1, 12];
+    initialMenuTreeByIds(ids);
+
     var tempdata = {
-        "username" : "username1",
-        "manager" : "李技师",
-        "identify" : "440003********4344",
-        "contact" : "13300000000",
-        "email" : "xxxxx@qq.com",
-        "area" : "广东省广州市番禺区大学城外环东路112号",
-        "household" : "广东广州",
-        "school" : "南方医科大学",
-        "major" : "临床医学"
+        "username": "username1",
+        "manager": "李技师",
+        "identify": "440003********4344",
+        "contact": "13300000000",
+        "email": "xxxxx@qq.com",
+        "area": "广东省广州市番禺区大学城外环东路112号",
+        "household": "广东广州",
+        "school": "南方医科大学",
+        "major": "临床医学"
     };
 
     $inputUsername.val(tempdata['username']);

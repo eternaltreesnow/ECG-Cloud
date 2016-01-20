@@ -3,7 +3,7 @@ $(function() {
     var $inputManager, $inputIdentify, $inputContact, $inputEmail, $inputArea, $inputHousehold;
     var $inputHospital, $inputOffice, $inputJob, $inputTechTitle, $inputQual, $inputQualTime, $inputPract, $inputPractTime, $inputSchool, $inputMajor,
 
-    $inputUsername = $("#inputUsername");
+        $inputUsername = $("#inputUsername");
     $inputPassword = $("#inputPassword");
     $rePassword = $("#rePassword");
     $selectStatus = $("#selectStatus");
@@ -24,24 +24,27 @@ $(function() {
     $inputSchool = $("#inputSchool");
     $inputMajor = $("#inputMajor");
 
+    var ids = [1, 11];
+    initialMenuTreeByIds(ids);
+
     var tempdata = {
-        "username" : "username1",
-        "manager" : "张教授",
-        "identify" : "440003********4344",
-        "contact" : "13300000000",
-        "email" : "xxxxx@qq.com",
-        "area" : "广东省广州市番禺区大学城外环东路112号",
-        "household" : "广东广州",
-        "hospital" : "中山大学附属第一医院",
-        "office" : "心血管内科",
-        "job" : "副主任医师",
-        "techtitle" : "",
-        "qual" : "xxxxxxxxxxxxxxxx",
-        "qualtime" : "1995-07-15",
-        "pract" : "xxxxxxxxxxxxxxx",
-        "practtime" : "2000-08-19",
-        "school" : "中山医学院",
-        "major" : "临床医学"
+        "username": "username1",
+        "manager": "张教授",
+        "identify": "440003********4344",
+        "contact": "13300000000",
+        "email": "xxxxx@qq.com",
+        "area": "广东省广州市番禺区大学城外环东路112号",
+        "household": "广东广州",
+        "hospital": "中山大学附属第一医院",
+        "office": "心血管内科",
+        "job": "副主任医师",
+        "techtitle": "",
+        "qual": "xxxxxxxxxxxxxxxx",
+        "qualtime": "1995-07-15",
+        "pract": "xxxxxxxxxxxxxxx",
+        "practtime": "2000-08-19",
+        "school": "中山医学院",
+        "major": "临床医学"
     };
 
     $inputUsername.val(tempdata['username']);

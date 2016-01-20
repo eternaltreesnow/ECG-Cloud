@@ -6,6 +6,9 @@ $(function() {
     var $typeContainer;
     var $id;
 
+    var ids = [1, 11];
+    initialMenuTreeByIds(ids);
+
     $uploadFile = $("#uploadFile");
     $checkFeedback = $("#checkFeedback");
     $typeContainer = $("#typeContainer");
@@ -14,12 +17,12 @@ $(function() {
     $id.val(location.search.substr(1).split("&")[0].split("=")[1]);
 
     $("input:radio[name='checkRadios']").on('change', function() {
-        if($("input:radio[name='checkRadios']:checked").attr('id') === "checkOption1") {
+        if ($("input:radio[name='checkRadios']:checked").attr('id') === "checkOption1") {
             $uploadFile.removeAttr('disabled');
             $typeContainer.hide();
             $submitBtn.show();
             $consultationBtn.hide();
-        } else if($("input:radio[name='checkRadios']:checked").attr('id') === "checkOption2") {
+        } else if ($("input:radio[name='checkRadios']:checked").attr('id') === "checkOption2") {
             $uploadFile.attr('disabled', 'disabled');
             $typeContainer.show();
             $submitBtn.show();

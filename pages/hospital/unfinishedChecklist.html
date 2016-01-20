@@ -18,6 +18,11 @@
         <link rel="stylesheet" href="../../static/css/frame.css">
         <link rel="stylesheet" href="../../static/css/hospital/checklistManage.css">
 
+        <!-- ReactJS -->
+        <script src="../../lib/React/react.min.js"></script>
+        <script src="../../lib/React/react-dom.js"></script>
+        <script src="../../lib/React/babel-browser.min.js"></script>
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- Warning: Respond.js doesn't work if you view the page via file:// -->
         <!-- [if lt IE 9]>
@@ -99,26 +104,7 @@
                     </ul>
                 </div>
                 <!-- Sidebar Menu Items -->
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav side-nav">
-                        <li>
-                            <a href="uploadFile.html">上传数据</a>
-                        </li>
-                        <li>
-                            <a href="checklistManage.html">
-                                <span>检查单管理</span>
-                                <span class="caret"></span>
-                            </a>
-                            <ul>
-                                <li class="active"><a href="unfinishedChecklist.html">未完成检查单</a></li>
-                                <li><a href="finishedChecklist.html">已完成检查单</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="patientManage.html">病人管理</a>
-                        </li>
-                    </ul>
-                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse" id="menu"></div>
             </div>
         </div>
         <div class="row main-page">
@@ -159,6 +145,10 @@
         <!-- DataTables -->
         <script src="../../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
         <script src="../../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
+
+        <!-- MenuTree React Plugin -->
+        <script src="../../static/plugin/MenuTree.js"></script>
+        <script src="../../static/js/hospital/menuTree.js"></script>
 
         <script src="../../static/js/hospital/unfinishedChecklist.js"></script>
     </body>

@@ -4,11 +4,14 @@ $(function() {
     var status = location.search.substr(1).split("&")[1].split("=")[1];
     var $inputSummary, $summaryResult, $submitBtn;
 
+    var ids = [2, 21];
+    initialMenuTreeByIds(ids);
+
     $inputSummary = $("#inputSummary");
     $summaryResult = $("#summaryResult");
     $submitBtn = $("#submitBtn");
 
-    if(status === "0") {
+    if (status === "0") {
         // Ongoing status
         $inputSummary.show();
         $submitBtn.show();

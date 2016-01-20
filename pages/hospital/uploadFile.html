@@ -18,6 +18,11 @@
         <link rel="stylesheet" href="../../static/css/frame.css">
         <link rel="stylesheet" href="../../static/css/hospital/uploadFile.css">
 
+        <!-- ReactJS -->
+        <script src="../../lib/React/react.min.js"></script>
+        <script src="../../lib/React/react-dom.js"></script>
+        <script src="../../lib/React/babel-browser.min.js"></script>
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- Warning: Respond.js doesn't work if you view the page via file:// -->
         <!-- [if lt IE 9]>
@@ -99,18 +104,7 @@
                     </ul>
                 </div>
                 <!-- Sidebar Menu Items -->
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav side-nav">
-                        <li class="active">
-                            <a href="uploadFile.html">上传数据</a>
-                        </li>
-                        <li>
-                            <a href="checklistManage.html">检查单管理</a>
-                        </li>
-                        <li>
-                            <a href="patientManage.html">病人管理</a>
-                        </li>
-                    </ul>
+                <div class="collapse navbar-collapse navbar-ex1-collapse" id="menu">
                 </div>
             </div>
         </div>
@@ -173,20 +167,6 @@
                             </select>
                         </div>
                     </div>
-                    <!--
-                    <div class="form-group">
-                        <label for="selectPartner" class="col-lg-3 control-label">指定合伙人 :</label>
-                        <div class="col-lg-8">
-                            <select id="selectPartner" class="form-control">
-                                <option value="part1">合伙人A</option>
-                                <option value="part2">合伙人B</option>
-                                <option value="part3">合伙人C</option>
-                                <option value="part4">合伙人D</option>
-                                <option value="part5">合伙人E</option>
-                            </select>
-                        </div>
-                    </div>
-                    -->
                     <div class="form-group">
                         <label for="inputFile" class="col-lg-3 control-label">心电数据文件: </label>
                         <div class="col-lg-8">
@@ -313,6 +293,10 @@
         <!-- Bootstrap-Datetimepick -->
         <script src="../../lib/bootstrap-datetimepicker/moment/moment.js"></script>
         <script src="../../lib/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+
+        <!-- MenuTree React Plugin -->
+        <script src="../../static/plugin/MenuTree.js"></script>
+        <script src="../../static/js/hospital/menuTree.js"></script>
 
         <script src="../../static/js/hospital/uploadFile.js"></script>
     </body>

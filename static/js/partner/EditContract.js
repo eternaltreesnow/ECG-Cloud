@@ -14,6 +14,9 @@ $(function() {
     $selectCheckType = $("#selectCheckType");
     $inputLimit = $("#inputLimit");
 
+    var ids = [2];
+    initialMenuTreeByIds(ids);
+
     /**
      * [$beginDatetimepicker 排期起始时间选择器]
      * [$endDatetimepicker 排期结束时间选择器]
@@ -40,14 +43,14 @@ $(function() {
     });
 
     var tempdata = {
-        "hospital" : "小谷围社区医院",
-        "manager" : "张经理",
-        "identify" : "440440********0000",
-        "contact" : "13300000000",
-        "email" : "xxxxx@qq.com",
-        "area" : "广东省广州市番禺区小谷围街道",
-        "price" : "30",
-        "limit" : "20"
+        "hospital": "小谷围社区医院",
+        "manager": "张经理",
+        "identify": "440440********0000",
+        "contact": "13300000000",
+        "email": "xxxxx@qq.com",
+        "area": "广东省广州市番禺区小谷围街道",
+        "price": "30",
+        "limit": "20"
     };
 
     $inputHospital.val(tempdata['hospital']);

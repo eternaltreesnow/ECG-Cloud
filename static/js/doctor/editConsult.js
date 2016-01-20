@@ -1,7 +1,10 @@
 $(function() {
     var $selectDoc;
     var $datetimepicker;
-    var $submitBtn, $submitModal
+    var $submitBtn, $submitModal;
+
+    var ids = [2, 21];
+    initialMenuTreeByIds(ids);
 
     $selectDoc = $("#selectDoc");
     $selectDoc.multiselect({
@@ -14,8 +17,8 @@ $(function() {
     $submitBtn = $("#submitBtn");
     $submitBtn.on('click', function() {
         $submitModal.modal({
-            'backdrop' : "static",
-            'show' : true
+            'backdrop': "static",
+            'show': true
         });
     });
 });

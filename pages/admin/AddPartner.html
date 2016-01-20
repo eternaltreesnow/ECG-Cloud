@@ -17,6 +17,11 @@
 
         <link rel="stylesheet" href="../../static/css/frame.css">
 
+        <!-- ReactJS -->
+        <script src="../../lib/React/react.min.js"></script>
+        <script src="../../lib/React/react-dom.js"></script>
+        <script src="../../lib/React/babel-browser.min.js"></script>
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- Warning: Respond.js doesn't work if you view the page via file:// -->
         <!-- [if lt IE 9]>
@@ -84,16 +89,7 @@
                     </ul>
                 </div>
                 <!-- Sidebar Menu Items -->
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav side-nav">
-                        <li class="active">
-                            <a href="partnerManage.html">合伙人管理</a>
-                        </li>
-                        <li class="">
-                            <a href="hospitalManage.html">基层医院管理</a>
-                        </li>
-                    </ul>
-                </div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse" id="menu"></div>
             </div>
         </div>
         <div class="row main-page">
@@ -197,6 +193,10 @@
         <!-- DataTables -->
         <script src="../../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
         <script src="../../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
+
+        <!-- MenuTree React Plugin -->
+        <script src="../../static/plugin/MenuTree.js"></script>
+        <script src="../../static/js/admin/menuTree.js"></script>
 
         <script src="../../static/js/admin/AddPartner.js"></script>
     </body>

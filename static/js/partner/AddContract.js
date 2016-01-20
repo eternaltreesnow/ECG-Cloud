@@ -1,4 +1,8 @@
 $(function() {
+
+    var ids = [2];
+    initialMenuTreeByIds(ids);
+
     var $beginDatetimepicker, $endDatetimepicker;
     /**
      * [$beginDatetimepicker 排期起始时间选择器]

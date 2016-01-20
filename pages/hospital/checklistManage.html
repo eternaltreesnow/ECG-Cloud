@@ -18,6 +18,11 @@
         <link rel="stylesheet" href="../../static/css/frame.css">
         <link rel="stylesheet" href="../../static/css/hospital/checklistManage.css">
 
+        <!-- ReactJS -->
+        <script src="../../lib/React/react.min.js"></script>
+        <script src="../../lib/React/react-dom.js"></script>
+        <script src="../../lib/React/babel-browser.min.js"></script>
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- Warning: Respond.js doesn't work if you view the page via file:// -->
         <!-- [if lt IE 9]>
@@ -79,45 +84,13 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="message-preview">
-                                        <a href="#" class="menu-link">
-                                            <div class="media">
-                                                <span class="pull-left">
-                                                    <img src="../../static/img/placeholder_50.png" alt="" class="media-oject">
-                                                </span>
-                                                <div class="media-body">
-                                                    <h5 class="media-heading"><strong>John Smith</strong></h5>
-                                                    <p class="small text-muted"><i class="glyphicon glyphicon-time"></i> Yesterday at 4:32 PM</p>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
                                 </ul>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <!-- Sidebar Menu Items -->
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav side-nav">
-                        <li>
-                            <a href="uploadFile.html">上传数据</a>
-                        </li>
-                        <li class="active">
-                            <a href="checklistManage.html">
-                                <span>检查单管理</span>
-                                <span class="caret"></span>
-                            </a>
-                            <ul>
-                                <li><a href="unfinishedChecklist.html">未完成检查单</a></li>
-                                <li><a href="finishedChecklist.html">已完成检查单</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="patientManage.html">病人管理</a>
-                        </li>
-                    </ul>
+                <div class="collapse navbar-collapse navbar-ex1-collapse" id="menu">
                 </div>
             </div>
         </div>
@@ -175,6 +148,10 @@
         <!-- DataTables -->
         <script src="../../lib/DataTables-1.10.8/js/jquery.dataTables.min.js"></script>
         <script src="../../lib/DataTables-1.10.8/js/dataTables.bootstrap.min.js"></script>
+
+        <!-- MenuTree React Plugin -->
+        <script src="../../static/plugin/MenuTree.js"></script>
+        <script src="../../static/js/hospital/menuTree.js"></script>
 
         <script src="../../static/js/hospital/checklistManage.js"></script>
     </body>

@@ -3,67 +3,71 @@ $(function() {
     var $linkEdit, $linkStop, $linkDelete, $linkStart;
     var $stopModal, $stopId, $stopModalBtn, $deleteModal, $deleteId, $deleteModalBtn, $startModal, $startId, $startModalBtn;
 
-    var tempdata = [
-        {
-            "id" : "01",
-            "username" : "hospital1",
-            "name" : "小谷围社区医院",
-            "ID" : "440022********0000",
-            "manager" : "张院长",
-            "time" : "2015-12-03 15:39",
-            "status" : "正常使用"
-        },
-        {
-            "id" : "02",
-            "username" : "hospital2",
-            "name" : "小谷围社区医院",
-            "ID" : "440022********0000",
-            "manager" : "李院长",
-            "time" : "2015-12-03 15:39",
-            "status" : "正常使用"
-        },
-        {
-            "id" : "03",
-            "username" : "hospital3",
-            "name" : "小谷围社区医院",
-            "ID" : "440022********0000",
-            "manager" : "张三",
-            "time" : "2015-12-03 15:39",
-            "status" : "正常使用"
-        },
-        {
-            "id" : "04",
-            "username" : "hospital4",
-            "name" : "小谷围社区医院",
-            "ID" : "440022********0000",
-            "manager" : "张三",
-            "time" : "2015-12-03 15:39",
-            "status" : "正常使用"
-        },
-        {
-            "id" : "05",
-            "username" : "hospital5",
-            "name" : "小谷围社区医院",
-            "ID" : "440022********0000",
-            "manager" : "张三",
-            "time" : "2015-12-03 15:39",
-            "status" : "停用",
-            "edit" : '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="edit">编辑</a>' +
-                     '<a href="javascript:void(0);" class="btn btn-success btn-xs" data-link="start">启用</a>' +
-                     '<a href="javascript:void(0);" class="btn btn-default btn-xs" data-link="delete">删除</a>'
-        },
-    ];
+    var ids = [2];
+    initialMenuTreeByIds(ids);
 
-    var tempcolumn = [
-        {"data": "id"},
-        {"data": "username"},
-        {"data": "name"},
-        {"data": "manager"},
-        {"data": "ID"},
-        {"data": "time"},
-        {"data": "status"},
-        {"data": "edit"}
-    ];
+    var tempdata = [{
+        "id": "01",
+        "username": "hospital1",
+        "name": "小谷围社区医院",
+        "ID": "440022********0000",
+        "manager": "张院长",
+        "time": "2015-12-03 15:39",
+        "status": "正常使用"
+    }, {
+        "id": "02",
+        "username": "hospital2",
+        "name": "小谷围社区医院",
+        "ID": "440022********0000",
+        "manager": "李院长",
+        "time": "2015-12-03 15:39",
+        "status": "正常使用"
+    }, {
+        "id": "03",
+        "username": "hospital3",
+        "name": "小谷围社区医院",
+        "ID": "440022********0000",
+        "manager": "张三",
+        "time": "2015-12-03 15:39",
+        "status": "正常使用"
+    }, {
+        "id": "04",
+        "username": "hospital4",
+        "name": "小谷围社区医院",
+        "ID": "440022********0000",
+        "manager": "张三",
+        "time": "2015-12-03 15:39",
+        "status": "正常使用"
+    }, {
+        "id": "05",
+        "username": "hospital5",
+        "name": "小谷围社区医院",
+        "ID": "440022********0000",
+        "manager": "张三",
+        "time": "2015-12-03 15:39",
+        "status": "停用",
+        "edit": '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="edit">编辑</a>' +
+            '<a href="javascript:void(0);" class="btn btn-success btn-xs" data-link="start">启用</a>' +
+            '<a href="javascript:void(0);" class="btn btn-default btn-xs" data-link="delete">删除</a>'
+    }, ];
+
+    var tempcolumn = [{
+        "data": "id"
+    }, {
+        "data": "username"
+    }, {
+        "data": "name"
+    }, {
+        "data": "manager"
+    }, {
+        "data": "ID"
+    }, {
+        "data": "time"
+    }, {
+        "data": "status"
+    }, {
+        "data": "edit"
+    }];
 
     $hospitalTable = $("#hospitalTable");
     $hospitalTable.DataTable({
@@ -72,7 +76,7 @@ $(function() {
         language: {
             "processing": "数据加载中, 请稍后...",
             "zeroRecords": "记录数为0...",
-            "emptyTable":  "记录数为0...",
+            "emptyTable": "记录数为0...",
             "paginate": {
                 "first": "首页",
                 "previous": "上一页",
@@ -86,11 +90,11 @@ $(function() {
         pagingType: "full_numbers",
         dom: 'rtl<"ecg-table-paginate"p>',
         columnDefs: [{
-            "targets" : -1,
-            "data" : null,
-            "defaultContent" : '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="edit">编辑</a>' +
-                               '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="stop">停用</a>' +
-                               '<a href="javascript:void(0);" class="btn btn-default btn-xs" data-link="delete">删除</a>'
+            "targets": -1,
+            "data": null,
+            "defaultContent": '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="edit">编辑</a>' +
+                '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="stop">停用</a>' +
+                '<a href="javascript:void(0);" class="btn btn-default btn-xs" data-link="delete">删除</a>'
         }]
     });
 

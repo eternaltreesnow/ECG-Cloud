@@ -5,6 +5,9 @@ $(function() {
     var $deleteModal, $confirmDeleteBtn;
     var $modifyTeamNameBtn, $successModal;
 
+    var ids = [1, 13];
+    initialMenuTreeByIds(ids);
+
     $addDocBtn = $("#addDocBtn");
     $addDocModal = $("#addDocModal");
     $searchDoc = $("#searchDoc");
@@ -115,25 +118,37 @@ $(function() {
         // },
     ];
 
-    var doccolumn = [
-        {"data": "id"},
-        {"data": "username"},
-        {"data": "name"},
-        {"data": "hospital"},
-        {"data": "title"},
-        {"data": "ID"},
-        {"data": "status"},
-        {"data": ""}
-    ];
+    var doccolumn = [{
+        "data": "id"
+    }, {
+        "data": "username"
+    }, {
+        "data": "name"
+    }, {
+        "data": "hospital"
+    }, {
+        "data": "title"
+    }, {
+        "data": "ID"
+    }, {
+        "data": "status"
+    }, {
+        "data": ""
+    }];
 
-    var techcolumn = [
-        {"data": "id"},
-        {"data": "username"},
-        {"data": "name"},
-        {"data": "ID"},
-        {"data": "status"},
-        {"data": ""}
-    ];
+    var techcolumn = [{
+        "data": "id"
+    }, {
+        "data": "username"
+    }, {
+        "data": "name"
+    }, {
+        "data": "ID"
+    }, {
+        "data": "status"
+    }, {
+        "data": ""
+    }];
 
     $doctorTable = $("#doctorTable");
     $doctorTable.DataTable({
@@ -142,7 +157,7 @@ $(function() {
         language: {
             "processing": "数据加载中, 请稍后...",
             "zeroRecords": "记录数为0...",
-            "emptyTable":  "记录数为0...",
+            "emptyTable": "记录数为0...",
             "paginate": {
                 "first": "首页",
                 "previous": "上一页",
@@ -156,9 +171,9 @@ $(function() {
         pagingType: "full_numbers",
         dom: 'rt',
         columnDefs: [{
-            "targets" : -1,
-            "data" : null,
-            "defaultContent" : '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="deleteDoc">删除</a>'
+            "targets": -1,
+            "data": null,
+            "defaultContent": '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="deleteDoc">删除</a>'
         }]
     });
 
@@ -169,7 +184,7 @@ $(function() {
         language: {
             "processing": "数据加载中, 请稍后...",
             "zeroRecords": "记录数为0...",
-            "emptyTable":  "记录数为0...",
+            "emptyTable": "记录数为0...",
             "paginate": {
                 "first": "首页",
                 "previous": "上一页",
@@ -183,9 +198,9 @@ $(function() {
         pagingType: "full_numbers",
         dom: 'rt',
         columnDefs: [{
-            "targets" : -1,
-            "data" : null,
-            "defaultContent" : '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="deleteTech">删除</a>'
+            "targets": -1,
+            "data": null,
+            "defaultContent": '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="deleteTech">删除</a>'
         }]
     });
 

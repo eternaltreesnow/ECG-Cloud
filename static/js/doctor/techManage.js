@@ -3,71 +3,72 @@ $(function() {
     var $linkStop, $linkStart, $linkDetails;
     var $stopModal, $stopId, $stopModalBtn, $startModal, $startId, $startModalBtn;
 
-    var tempdata = [
-        {
-            "id" : "01",
-            "username" : "username1",
-            "ID" : "440022********0000",
-            "name" : "技师A",
-            "status" : "正常",
-            "edit" : '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="details">详情</a>' +
-                     '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="stop">停用</a>'
-        },
-        {
-            "id" : "02",
-            "username" : "username1",
-            "ID" : "440022********0000",
-            "name" : "技师A",
-            "status" : "正常",
-            "edit" : '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="details">详情</a>' +
-                     '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="stop">停用</a>'
-        },
-        {
-            "id" : "03",
-            "username" : "username1",
-            "ID" : "440022********0000",
-            "name" : "技师A",
-            "status" : "正常",
-            "edit" : '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="details">详情</a>' +
-                     '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="stop">停用</a>'
-        },
-        {
-            "id" : "04",
-            "username" : "username1",
-            "ID" : "440022********0000",
-            "name" : "技师A",
-            "status" : "正常",
-            "edit" : '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="details">详情</a>' +
-                     '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="stop">停用</a>'
-        },
-        {
-            "id" : "05",
-            "username" : "username1",
-            "ID" : "440022********0000",
-            "name" : "技师A",
-            "status" : "正常",
-            "edit" : '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="details">详情</a>' +
-                     '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="stop">停用</a>'
-        },
-        {
-            "id" : "06",
-            "username" : "username1",
-            "ID" : "440022********0000",
-            "name" : "技师A",
-            "status" : "停用",
-            "edit" : '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="details">详情</a>' +
-                     '<a href="javascript:void(0);" class="btn btn-success btn-xs" data-link="start">启用</a>'
-        },
-    ];
+    var ids = [3];
+    initialMenuTreeByIds(ids);
 
-    var tempcolumn = [
-        {"data": "id"},
-        {"data": "username"},
-        {"data": "name"},
-        {"data": "ID"},
-        {"data": "status"},
-        {"data": "edit"}
-    ];
+    var tempdata = [{
+        "id": "01",
+        "username": "username1",
+        "ID": "440022********0000",
+        "name": "技师A",
+        "status": "正常",
+        "edit": '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="details">详情</a>' +
+            '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="stop">停用</a>'
+    }, {
+        "id": "02",
+        "username": "username1",
+        "ID": "440022********0000",
+        "name": "技师A",
+        "status": "正常",
+        "edit": '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="details">详情</a>' +
+            '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="stop">停用</a>'
+    }, {
+        "id": "03",
+        "username": "username1",
+        "ID": "440022********0000",
+        "name": "技师A",
+        "status": "正常",
+        "edit": '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="details">详情</a>' +
+            '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="stop">停用</a>'
+    }, {
+        "id": "04",
+        "username": "username1",
+        "ID": "440022********0000",
+        "name": "技师A",
+        "status": "正常",
+        "edit": '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="details">详情</a>' +
+            '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="stop">停用</a>'
+    }, {
+        "id": "05",
+        "username": "username1",
+        "ID": "440022********0000",
+        "name": "技师A",
+        "status": "正常",
+        "edit": '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="details">详情</a>' +
+            '<a href="javascript:void(0);" class="btn btn-warning btn-xs" data-link="stop">停用</a>'
+    }, {
+        "id": "06",
+        "username": "username1",
+        "ID": "440022********0000",
+        "name": "技师A",
+        "status": "停用",
+        "edit": '<a href="javascript:void(0);" class="btn btn-primary btn-xs" data-link="details">详情</a>' +
+            '<a href="javascript:void(0);" class="btn btn-success btn-xs" data-link="start">启用</a>'
+    }, ];
+
+    var tempcolumn = [{
+        "data": "id"
+    }, {
+        "data": "username"
+    }, {
+        "data": "name"
+    }, {
+        "data": "ID"
+    }, {
+        "data": "status"
+    }, {
+        "data": "edit"
+    }];
 
     $techTable = $("#techTable");
     $techTable.DataTable({
@@ -76,7 +77,7 @@ $(function() {
         language: {
             "processing": "数据加载中, 请稍后...",
             "zeroRecords": "记录数为0...",
-            "emptyTable":  "记录数为0...",
+            "emptyTable": "记录数为0...",
             "paginate": {
                 "first": "首页",
                 "previous": "上一页",

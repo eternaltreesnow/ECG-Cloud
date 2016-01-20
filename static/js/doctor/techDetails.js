@@ -1,6 +1,9 @@
 $(function() {
     var $inputManager, $inputIdentify, $inputContact, $inputEmail, $inputArea, $inputHousehold;
-    var $inputSchool, $inputMajor,
+    var $inputSchool, $inputMajor;
+
+    var ids = [3];
+    initialMenuTreeByIds(ids);
 
     $inputManager = $("#inputManager");
     $inputIdentify = $("#inputIdentify");
@@ -12,14 +15,14 @@ $(function() {
     $inputMajor = $("#inputMajor");
 
     var tempdata = {
-        "manager" : "李技师",
-        "identify" : "440003********4344",
-        "contact" : "13300000000",
-        "email" : "xxxxx@qq.com",
-        "area" : "广东省广州市番禺区大学城外环东路112号",
-        "household" : "广东广州",
-        "school" : "南方医科大学",
-        "major" : "临床医学"
+        "manager": "李技师",
+        "identify": "440003********4344",
+        "contact": "13300000000",
+        "email": "xxxxx@qq.com",
+        "area": "广东省广州市番禺区大学城外环东路112号",
+        "household": "广东广州",
+        "school": "南方医科大学",
+        "major": "临床医学"
     };
 
     $inputManager.text(tempdata['manager']);
